@@ -8,12 +8,11 @@ export default function Header() {
             
             <nav className="flex justify-end w-full pr-12">
                 <ul className="flex space-x-2">
-                    <li><Link href="/" ><button className="hover:bg-[#00A8A8] rounded cursor-pointer transition-colors duration-300 text-gray-700 hover:text-white px-4 py-2">LINFAT</button></Link></li>
-                    <li><Link href="/about" className="hover:underline h-full"><button className="hover:bg-[#00A8A8] rounded cursor-pointer transition-colors duration-300 text-gray-700 hover:text-white px-4 py-2">MMI</button></Link></li>
-                    <li><Link href="/contact" className="hover:underline h-full"><button className="hover:bg-[#00A8A8] rounded cursor-pointer transition-colors duration-300 text-gray-700 hover:text-white px-4 py-2">R&T</button></Link></li>
+                    <li><Link href="/pages/linfat" ><button className="hover:bg-[#00A8A8] rounded cursor-pointer transition-colors duration-300 text-gray-700 hover:text-white px-4 py-2">LINFAT</button></Link></li>
+                    <li><Link href="/pages/mmi" className="hover:underline h-full"><button className="hover:bg-[#00A8A8] rounded cursor-pointer transition-colors duration-300 text-gray-700 hover:text-white px-4 py-2">MMI</button></Link></li>
+                    <li><Link href="/pages/rt" className="hover:underline h-full"><button className="hover:bg-[#00A8A8] rounded cursor-pointer transition-colors duration-300 text-gray-700 hover:text-white px-4 py-2">R&T</button></Link></li>
                 </ul>
             </nav>
-
         </header>
     );
 }   
