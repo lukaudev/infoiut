@@ -54,10 +54,10 @@ export default function RT() {
             animate="visible"
           >
             <p className="text-gray-700 text-lg mb-4">
-              Bienvenue à la page de Recherche et Technologie (R&T)!
+              Bienvenue à la page de Réseaux et Télécommunications (R&T)!
             </p>
             <p className="text-gray-600 mb-4">
-              Ici, vous pouvez trouver des informations sur les projets de recherche et technologie de l&apos;IUT.
+              Ici, vous pouvez trouver des informations sur les projets de réseaux et télécommunications de l&apos;IUT.
             </p>
             <motion.div
               className="mt-8"
@@ -66,19 +66,18 @@ export default function RT() {
               animate="visible"
             >
               <motion.h2 className="text-2xl font-semibold text-gray-800 mb-4" variants={itemVariants}>
-                Domaines de Recherche
+               Objectifs du programme R&T
               </motion.h2>
-              <ul className="list-disc list-inside text-gray-700 space-y-2">
-                <motion.li variants={itemVariants}>Intelligence Artificielle</motion.li>
-                <motion.li variants={itemVariants}>Développement Web</motion.li>
-                <motion.li variants={itemVariants}>Sécurité des Données</motion.li>
-                <motion.li variants={itemVariants}>Cloud Computing</motion.li>
+              <ul className=" text-gray-700 space-y-2">
+                <motion.p variants={itemVariants}>
+                  Le B.U.T R&T forme en trois ans des professionnels en réseaux et télécommunications, cadres intermédiaires de leur entreprise ou de leur organisation, capables de comprendre, de mettre en œuvre, de configurer et de maintenir des équipements et systèmes d’informations, tout en assurant leur sécurité physique et logicielle. En plus des compétences scientifiques et techniques, le B.U.T R&T met l’accent sur les savoir-être, l’éthique, la capacité à travailler en équipe dans un environnement international et la compréhension des enjeux des technologies modernes.
+                </motion.p>
               </ul>
             </motion.div>
           </motion.div>
         </div>
       </div>
-       <Footer />
+      <Footer />
     </main>
   );
 }
