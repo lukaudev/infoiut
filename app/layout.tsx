@@ -14,7 +14,7 @@ const geistMono = Geist_Mono({
 
 export const metadata: Metadata = {
   title: "INFOIUT",
-  description: "Informations sur IUT(MMI, LINFAT)",
+  description: "Informations sur l'IUT (MMI, LIFAT, R&T)",
 };
 
 export default function RootLayout({

@@ -1,5 +1,5 @@
 # INFOIUT
-Un site que décrit les information à propos de l'iut (sur LINFAT, MMI et R&amp;T)
+Un site que décrit les information à propos de l'iut (sur LIFAT, MMI et R&amp;T)
 
 # IUT de Blois – Formations Numériques et Technologiques
 
