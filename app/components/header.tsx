@@ -14,16 +14,33 @@ import {
 export default function Header() {
   return (
     <header className="bg-gray-50 border-b border-gray-300 flex items-center max-h-25">
-      <Image
-        src="/favicon.png"
-        alt="Logo"
-        width={250}
-        height={250}
-        className="inline-block"
-      />
+      <Link href="/">
+          <Image
+            src="/favicon.png"
+            alt="Logo"
+            width={250}
+            height={250}
+            className="inline-block"
+          />
+      </Link>
+      
 
       <nav className="flex justify-end w-full pr-12">
         <ul className="flex space-x-2">
+          <li>
+            <Link href="/lequipe">
+            <button className="hover:bg-[#91a0a0] rounded cursor-pointer transition-colors duration-300 text-gray-700 hover:text-white px-4 py-2">
+                  L&apos;equipe 
+            </button>
+            </Link>
+          </li>
+          <li>
+            <Link href="/galerie">
+            <button className="hover:bg-[#91a0a0] rounded cursor-pointer transition-colors duration-300 text-gray-700 hover:text-white px-4 py-2">
+                  Galerie 
+            </button>
+            </Link>
+          </li>
           <li>
             <DropdownMenu>
               <DropdownMenuTrigger asChild>

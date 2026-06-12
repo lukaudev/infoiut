@@ -4,6 +4,8 @@ import Header from "./components/header";
 import Link from "next/link";
 import { motion } from "framer-motion";
 import Footer from "./components/footer";
+import Image from "next/image";
+
 export default function Home() {
   const containerVariants = {
     hidden: { opacity: 0 },
@@ -38,7 +40,7 @@ export default function Home() {
   return (
     <main className="flex min-h-screen flex-col bg-gray-100">
       <Header />
-      <div className="w-full p-8">
+      <div className="w-full p-8 mt-16">
         <div className="max-w-5xl mx-auto">
           <motion.h1
             className="text-4xl font-bold text-gray-800 mb-6"
@@ -74,9 +76,10 @@ export default function Home() {
                   whileHover={{ scale: 1.05, boxShadow: "0 20px 25px -5px rgba(0, 0, 0, 0.1)" }}
                   whileTap={{ scale: 0.98 }}
                 >
+            
                   <h3 className="text-xl font-bold text-blue-700 mb-2">LIFAT</h3>
                   <p className="text-gray-600">
-                    Laboratoire d&apos;Informatique et de Formation en Analyse de Technologie
+                    Laboratoire d&apos;Informatique Fondamentale et Appliquée de Tours
                   </p>
                 </motion.div>
               </Link>
@@ -88,7 +91,7 @@ export default function Home() {
                   whileTap={{ scale: 0.98 }}
                 >
                   <h3 className="text-xl font-bold text-green-700 mb-2">MMI</h3>
-                  <p className="text-gray-600">Master en Multimédia et Interfaces</p>
+                  <p className="text-gray-600">Métiers du Multimédia et de l&apos;Internet</p>
                 </motion.div>
               </Link>
               <Link href="/rt">

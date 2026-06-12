@@ -54,7 +54,7 @@ export default function LIFAT() {
             animate="visible"
           >
             <p className="text-gray-700 text-lg mb-4">
-             Laboratoire dInformatique Fondamentale et Appliquée de Tours
+             Laboratoire d&apos;Informatique Fondamentale et Appliquée de Tours
             </p>
             <p className="text-gray-600 mb-4">
               Ici, vous pouvez trouver des informations sur le programme LIFAT.
