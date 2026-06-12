@@ -2,6 +2,7 @@
 
 import Header from "../components/header";
 import { motion } from "framer-motion";
+import Footer from "../components/footer";
 
 export default function LIFAT() {
   const containerVariants = {
@@ -44,7 +45,7 @@ export default function LIFAT() {
             initial="hidden"
             animate="visible"
           >
-            MMI
+            LIFAT
           </motion.h1>
           <motion.div
             className="bg-white rounded-lg shadow-lg p-8"
@@ -53,10 +54,10 @@ export default function LIFAT() {
             animate="visible"
           >
             <p className="text-gray-700 text-lg mb-4">
-              Bienvenue à la page du Master en Multimédia et Interfaces (MMI)!
+             Laboratoire dInformatique Fondamentale et Appliquée de Tours
             </p>
             <p className="text-gray-600 mb-4">
-              Ici, vous pouvez trouver des informations sur le programme de master MMI.
+              Ici, vous pouvez trouver des informations sur le programme LIFAT.
             </p>
             <motion.div
               className="mt-8"
@@ -65,17 +66,25 @@ export default function LIFAT() {
               animate="visible"
             >
               <motion.h2 className="text-2xl font-semibold text-gray-800 mb-4" variants={itemVariants}>
-                Informations du Programme
+                Qu&apos;est-ce que c&apos;est l&apos;LIFAT?
               </motion.h2>
-              <ul className="list-disc list-inside text-gray-700 space-y-2">
-                <motion.li variants={itemVariants}>Durée: 2 ans</motion.li>
-                <motion.li variants={itemVariants}>Domaine: Technologie et Multimédia</motion.li>
-                <motion.li variants={itemVariants}>Modalité: Présentielle</motion.li>
+              <ul className="text-gray-700 space-y-2">
+                <motion.li variants={itemVariants}>
+                  Les recherches du Laboratoire d’Informatique Fondamentale et Appliquée de Tours (LIFAT) consistent à concevoir et développer des modèles, et à créer des algorithmes pour la fouille de données, la visualisation de données, l’apprentissage automatique, le traitement des langues naturelles et des images ou l’optimisation combinatoire. Le laboratoire est donc spécialisé en Sciences des Données, avec des spécialités reconnues dans les domaines de l’Intelligence Artificielle et de l’Optimisation.   
+                </motion.li>
+              </ul>
+               <motion.h2 className="text-2xl font-semibold text-gray-800 mt-2 mb-4" variants={itemVariants}>
+                Thèmes de Recherche
+              </motion.h2>
+              <ul className="text-gray-700 space-y-2">
+                <motion.li variants={itemVariants} className="list-disc list-inside">Informatique, Intelligence Artificielle  </motion.li>
+                <motion.li variants={itemVariants} className="list-disc list-inside">Science des données (apprentissage, fouille de texte et de données, visualisation de données) et Optimisation discrète, analyse d’images et vision</motion.li>
               </ul>
             </motion.div>
           </motion.div>
         </div>
       </div>
+      <Footer />
     </main>
   );
 }

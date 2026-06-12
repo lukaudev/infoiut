@@ -2,6 +2,7 @@
 
 import Header from "../components/header";
 import { motion } from "framer-motion";
+import Footer from "../components/footer";
 
 export default function MMI() {
   const containerVariants = {
@@ -20,7 +21,7 @@ export default function MMI() {
     visible: {
       opacity: 1,
       y: 0,
-      transition: { duration: 0.5 },
+      transition: { duration: 0.2 },
     },
   };
 
@@ -29,7 +30,7 @@ export default function MMI() {
     visible: {
       opacity: 1,
       x: 0,
-      transition: { duration: 0.6 },
+      transition: { duration: 0.2 },
     },
   };
 
@@ -53,10 +54,10 @@ export default function MMI() {
             animate="visible"
           >
             <p className="text-gray-700 text-lg mb-4">
-              Bienvenue à la page du Master en Multimédia et Interfaces (MMI)!
+              Bienvenue à la page du Metiers en Multimédia et Interfaces (MMI)!
             </p>
             <p className="text-gray-600 mb-4">
-              Ici, vous pouvez trouver des informations sur le programme de master MMI.
+              Ici, vous pouvez trouver des informations sur le programme de MMI.
             </p>
             <motion.div
               className="mt-8"
@@ -76,6 +77,7 @@ export default function MMI() {
           </motion.div>
         </div>
       </div>
+      <Footer />
     </main>
   );
 }

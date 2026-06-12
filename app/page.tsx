@@ -3,7 +3,7 @@
 import Header from "./components/header";
 import Link from "next/link";
 import { motion } from "framer-motion";
-
+import Footer from "./components/footer";
 export default function Home() {
   const containerVariants = {
     hidden: { opacity: 0 },
@@ -11,7 +11,7 @@ export default function Home() {
       opacity: 1,
       transition: {
         staggerChildren: 0.2,
-        delayChildren: 0.1,
+        delayChildren: 0.05,
       },
     },
   };
@@ -22,7 +22,7 @@ export default function Home() {
       opacity: 1,
       y: 0,
       scale: 1,
-      transition: { duration: 0.5 },
+      transition: { duration: 0.02 },
     },
   };
 
@@ -31,7 +31,7 @@ export default function Home() {
     visible: {
       opacity: 1,
       y: 0,
-      transition: { duration: 0.7 },
+      transition: { duration: 0.02 },
     },
   };
 
@@ -55,7 +55,8 @@ export default function Home() {
             animate="visible"
           >
             <p className="text-gray-700 text-lg mb-4">
-              INFOIUT est le portail officiel de l&apos;IUT, où vous pouvez trouver des informations sur nos programmes et activités.
+              INFOIUT c&apos;est un portail d&apos;information pour les étudiants de l&apos;IUT de Tours. Vous pouvez trouver des informations sur les différents programmes, les actualités, les événements et bien plus encore.
+
             </p>
             <p className="text-gray-600 mb-6">
               Sélectionnez l&apos;un des programmes ci-dessous pour en savoir plus :
@@ -105,6 +106,7 @@ export default function Home() {
           </motion.div>
         </div>
       </div>
+      <Footer />
     </main>
   );
 }

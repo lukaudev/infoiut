@@ -1,5 +1,6 @@
 "use client";
 
+import Footer from "../components/footer";
 import Header from "../components/header";
 import { motion } from "framer-motion";
 
@@ -20,7 +21,7 @@ export default function RT() {
     visible: {
       opacity: 1,
       y: 0,
-      transition: { duration: 0.5 },
+      transition: { duration: 0.2 },
     },
   };
 
@@ -29,7 +30,7 @@ export default function RT() {
     visible: {
       opacity: 1,
       x: 0,
-      transition: { duration: 0.6 },
+      transition: { duration: 0.2 },
     },
   };
 
@@ -77,6 +78,7 @@ export default function RT() {
           </motion.div>
         </div>
       </div>
+       <Footer />
     </main>
   );
 }
