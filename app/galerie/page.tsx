@@ -3,6 +3,7 @@
 import Header from "../components/header";
 import { motion } from "framer-motion";
 import Footer from "../components/footer";
+import Image from "next/image";
 
 export default function Galerie() {
   const containerVariants = {
@@ -38,7 +39,7 @@ export default function Galerie() {
     <main className="flex min-h-screen flex-col bg-gray-100">
       <Header />
       <div className="w-full p-8">
-        <div className="max-w-5xl mx-auto">
+        <div className="max-w-7xl mx-auto">
           <motion.h1
             className="text-4xl font-bold text-gray-800 mb-6"
             variants={titleVariants}
@@ -54,16 +55,72 @@ export default function Galerie() {
             animate="visible"
           >
             <p className="text-gray-700 text-lg mb-4">
-               Ici, vous pouvez trouver les photos et video de quelques endroits de l&apos;IUT de Tours à Blois. 
+               Ici, vous pouvez trouver les photos de quelques endroits de l&apos;IUT de Tours à Blois. 
             </p>
             
             <motion.div
-              className="mt-8"
+              className="mt-8 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6"
               variants={containerVariants}
               initial="hidden"
               animate="visible"
             >
-                
+                <motion.div className="mb-6" variants={itemVariants}>
+                    <h2 className="text-2xl font-semibold text-gray-800 mb-4">Accueil</h2>
+                    <figure className="w-full bg-gray-50 border border-gray-100">
+                        <Image  src="/assets/lifat.png" alt="Bâtiment B" className="w-full" width={100} height={150} />
+                        <figcaption className="text-sm text-gray-500 mt-2">Bâtiment B - Accueil</figcaption>
+                    </figure>
+                </motion.div>
+                <motion.div className="mb-6" variants={itemVariants}>
+                    <h2 className="text-2xl font-semibold text-gray-800 mb-4">Secretariat</h2>
+                    <figure className="w-full bg-gray-50 border border-gray-100">
+                        <Image src="/assets/lifat.png" alt="Bâtiment A" className="w-full" width={100} height={150} />
+                        <figcaption className="text-sm text-gray-500 mt-2">Bâtiment A - Secrétariat</figcaption>
+                    </figure>
+                </motion.div>
+                <motion.div className="mb-6" variants={itemVariants}>
+                    <h2 className="text-2xl font-semibold text-gray-800 mb-4">Salle A</h2>
+                    <figure className="w-full bg-gray-50 border border-gray-100">
+                        <Image  src="/assets/lifat.png" alt="Bâtiment B" className="w-full" width={100} height={150} />
+                        <figcaption className="text-sm text-gray-500 mt-2">Bâtiment B - Salle A</figcaption>
+                    </figure>
+                </motion.div>
+                <motion.div className="mb-6" variants={itemVariants}>
+                    <h2 className="text-2xl font-semibold text-gray-800 mb-4">Secretariat</h2>
+                    <figure className="w-full bg-gray-50 border border-gray-100">
+                        <Image src="/assets/lifat.png" alt="Bâtiment A" className="w-full" width={100} height={150} />
+                        <figcaption className="text-sm text-gray-500 mt-2">Bâtiment A - Secrétariat</figcaption>
+                    </figure>
+                </motion.div>
+                <motion.div className="mb-6" variants={itemVariants}>
+                    <h2 className="text-2xl font-semibold text-gray-800 mb-4">Salle A</h2>
+                    <figure className="w-full bg-gray-50 border border-gray-100">
+                        <Image src="/assets/lifat.png" alt="Bâtiment C" className="w-full" width={100} height={150} />
+                        <figcaption className="text-sm text-gray-500 mt-2">Bâtiment C - Salle A</figcaption>
+                    </figure>
+                </motion.div>
+
+                <motion.div className="mb-6" variants={itemVariants}>
+                    <h2 className="text-2xl font-semibold text-gray-800 mb-4">Accueil</h2>
+                    <figure className="w-full bg-gray-50 border border-gray-100">
+                        <Image  src="/assets/lifat.png" alt="Bâtiment B" className="w-full" width={100} height={150} />
+                        <figcaption className="text-sm text-gray-500 mt-2">Bâtiment B - Accueil</figcaption>
+                    </figure>
+                </motion.div>
+                <motion.div className="mb-6" variants={itemVariants}>
+                    <h2 className="text-2xl font-semibold text-gray-800 mb-4">Secretariat</h2>
+                    <figure className="w-full bg-gray-50 border border-gray-100">
+                        <Image src="/assets/lifat.png" alt="Bâtiment A" className="w-full" width={100} height={150} />
+                        <figcaption className="text-sm text-gray-500 mt-2">Bâtiment A - Secrétariat</figcaption>
+                    </figure>
+                </motion.div>
+                <motion.div className="mb-6" variants={itemVariants}>
+                    <h2 className="text-2xl font-semibold text-gray-800 mb-4">Salle A</h2>
+                    <figure className="w-full bg-gray-50 border border-gray-100">
+                        <Image src="/assets/lifat.png" alt="Bâtiment C" className="w-full" width={100} height={150} />
+                        <figcaption className="text-sm text-gray-500 mt-2">Bâtiment C - Salle A</figcaption>
+                    </figure>
+                </motion.div>
             </motion.div>
           </motion.div>
         </div>

@@ -10,7 +10,6 @@ import {
   DropdownMenuTrigger,
 } from "@/components/ui/dropdown-menu";
 
-
 export default function Header() {
   return (
     <header className="bg-gray-50 border-b border-gray-300 flex items-center max-h-25">
