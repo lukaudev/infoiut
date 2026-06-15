@@ -111,6 +111,11 @@ export default function Header() {
               L&apos;equipe
             </button>
           </Link>
+          <Link href="/projects" onClick={closeMenu}>
+            <button className="w-full text-left hover:bg-[#91a0a0] transition-colors duration-300 text-gray-700 hover:text-white px-6 py-3">
+              Projects
+            </button>
+          </Link>
           <Link href="/galerie" onClick={closeMenu}>
             <button className="w-full text-left hover:bg-[#91a0a0] transition-colors duration-300 text-gray-700 hover:text-white px-6 py-3">
               Galerie
