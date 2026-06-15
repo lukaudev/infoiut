@@ -116,10 +116,10 @@ export default function Lequipe() {
                         <p className="text-gray-700 text-lg mb-4">
                             Bienvenue à la page de l&apos;équipe de l&apos;IUT de Tours à Blois!
                         </p>
-                        <p className="text-gray-600 mb-4">
-                            Ici, vous pouvez trouver des informations sur les membres de l&apos;équipe pédagogique et administrative de l&apos;IUT.
-                            tableau de l&apos;équipe pédagogique et administrative de l&apos;IUT de Tours à Blois.
-                            <div className="rounded-md border w-full mt-10">
+                        <p className="text-gray-600 mb-6">
+                            Ici, vous pouvez trouver des informations sur les membres de l&apos;équipe pédagogique et administrative de l&apos;IUT de Tours à Blois.
+                        </p>
+                        <div className="rounded-md border w-full overflow-x-auto">
                             <Table>
                                 <TableHeader>
                                     <TableRow>
@@ -147,10 +147,9 @@ export default function Lequipe() {
                                     ))}
                                 </TableBody>
                             </Table>
+                        </div>
                     </div>
-                </p>
-            </div>
-        </div>
+                </div>
             </div >
         <Footer />
         </main >

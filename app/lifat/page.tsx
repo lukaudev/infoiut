@@ -21,7 +21,7 @@ export default function LIFAT() {
     visible: {
       opacity: 1,
       y: 0,
-      transition: { duration: 0.5 },
+      transition: { duration: 0.3 },
     },
   };
 
@@ -30,7 +30,7 @@ export default function LIFAT() {
     visible: {
       opacity: 1,
       x: 0,
-      transition: { duration: 0.6 },
+      transition: { duration: 0.2 },
     },
   };
 
