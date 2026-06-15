@@ -18,7 +18,7 @@ export default function Header() {
   const closeMenu = () => setIsOpen(false);
 
   return (
-    <header className="bg-gray-50 border-b border-gray-300 fixed top-0 left-0 right-0 z-50 h-20">
+    <header className="bg-white border-b border-gray-300 fixed top-0 left-0 right-0 z-50 h-20">
       <div className="flex items-center justify-between h-full px-4 md:px-12">
         {/* Logo */}
         <Link href="/" onClick={closeMenu} className="">
@@ -32,36 +32,36 @@ export default function Header() {
         </Link>
 
         {/* Desktop Navigation */}
-        <nav className="hidden md:flex items-center justify-end gap-1">
-          <Link href="/lequipe">
-            <button className="hover:bg-[#91a0a0] rounded cursor-pointer transition-colors duration-300 text-gray-700 hover:text-white px-4 py-2">
+        <nav className="hidden md:flex items-center justify-end gap-1 button-group h-full">
+          <Link href="/lequipe" className="h-full flex items-center">
+            <button className="h-full  rounded cursor-pointer transition-colors duration-300 text-gray-700 hover:text-[#0a9ca7] px-4 flex items-center">
               L&apos;equipe
             </button>
           </Link>
-          <Link href="/galerie">
-            <button className="hover:bg-[#91a0a0] rounded cursor-pointer transition-colors duration-300 text-gray-700 hover:text-white px-4 py-2">
+          <Link href="/galerie" className="h-full flex items-center">
+            <button className="h-full  rounded cursor-pointer transition-colors duration-300 text-gray-700 hover:text-[#0a9ca7] px-4 flex items-center">
               Galerie
             </button>
           </Link>
           <DropdownMenu>
             <DropdownMenuTrigger asChild>
-              <button className="hover:bg-[#00A8A8] rounded cursor-pointer transition-colors duration-300 text-gray-700 hover:text-white px-4 py-2">
+              <button className="h-full hover:bg-[#00A8A8] rounded cursor-pointer transition-colors duration-300 text-gray-700 hover:text-[#0a9ca7] px-4 flex items-center">
                 Recherches <span className="ml-1">▾</span>
               </button>
             </DropdownMenuTrigger>
             <DropdownMenuContent className="w-40" align="end">
               <Link href="/lifat" onClick={closeMenu}>
-                <DropdownMenuItem className="hover:bg-[#00A8A8] rounded cursor-pointer transition-colors duration-300 text-gray-700 hover:text-white px-4 py-2">
+                <DropdownMenuItem className="hover:bg-[#00A8A8] rounded cursor-pointer transition-colors duration-300 text-gray-700 hover:text-[#0a9ca7] px-4 py-2">
                   LIFAT
                 </DropdownMenuItem>
               </Link>
               <Link href="/mmi" onClick={closeMenu}>
-                <DropdownMenuItem className="hover:bg-[#00A8A8] rounded cursor-pointer transition-colors duration-300 text-gray-700 hover:text-white px-4 py-2">
+                <DropdownMenuItem className="hover:bg-[#00A8A8] rounded cursor-pointer transition-colors duration-300 text-gray-700 hover:text-[#0a9ca7] px-4 py-2">
                   MMI
                 </DropdownMenuItem>
               </Link>
               <Link href="/rt" onClick={closeMenu}>
-                <DropdownMenuItem className="hover:bg-[#00A8A8] rounded cursor-pointer transition-colors duration-300 text-gray-700 hover:text-white px-4 py-2">
+                <DropdownMenuItem className="hover:bg-[#00A8A8] rounded cursor-pointer transition-colors duration-300 text-gray-700 hover:text-[#0a9ca7] px-4 py-2">
                   R&T
                 </DropdownMenuItem>
               </Link>
@@ -72,7 +72,7 @@ export default function Header() {
         {/* Mobile Menu Button */}
         <button
           onClick={() => setIsOpen(!isOpen)}
-          className="md:hidden hover:bg-[#91a0a0] rounded cursor-pointer transition-colors duration-300 text-gray-700 hover:text-white p-2"
+          className="md:hidden  rounded cursor-pointer transition-colors duration-300 text-gray-700 hover:text-[#0a9ca7] p-2"
         >
           <svg
             xmlns="http://www.w3.org/2000/svg"
@@ -107,23 +107,23 @@ export default function Header() {
       >
         <nav className="flex flex-col py-4">
           <Link href="/lequipe" onClick={closeMenu}>
-            <button className="w-full text-left hover:bg-[#91a0a0] transition-colors duration-300 text-gray-700 hover:text-white px-6 py-3">
+            <button className="w-full text-left  transition-colors duration-300 text-gray-700 hover:text-[#0a9ca7] px-6 py-3">
               L&apos;equipe
             </button>
           </Link>
           <Link href="/projects" onClick={closeMenu}>
-            <button className="w-full text-left hover:bg-[#91a0a0] transition-colors duration-300 text-gray-700 hover:text-white px-6 py-3">
+            <button className="w-full text-left  transition-colors duration-300 text-gray-700 hover:text-[#0a9ca7] px-6 py-3">
               Projects
             </button>
           </Link>
           <Link href="/galerie" onClick={closeMenu}>
-            <button className="w-full text-left hover:bg-[#91a0a0] transition-colors duration-300 text-gray-700 hover:text-white px-6 py-3">
+            <button className="w-full text-left  transition-colors duration-300 text-gray-700 hover:text-[#0a9ca7] px-6 py-3">
               Galerie
             </button>
           </Link>
           <button
             onClick={() => setIsResearchesOpen(!isResearchesOpen)}
-            className="w-full text-left hover:bg-[#91a0a0] transition-colors duration-300 text-gray-700 hover:text-white px-6 py-3 flex items-center justify-between"
+            className="w-full text-left hover:bg-gray-100 transition-colors duration-300 text-gray-700 px-6 py-3 flex items-center justify-between"
           >
             Recherches
             <span className={`transition-transform ${isResearchesOpen ? "rotate-180" : ""}`}>▾</span>
@@ -131,17 +131,17 @@ export default function Header() {
           {isResearchesOpen && (
             <div className="bg-gray-100">
               <Link href="/lifat" onClick={closeMenu}>
-                <button className="w-full text-left hover:bg-[#00A8A8] transition-colors duration-300 text-gray-700 hover:text-white px-8 py-2">
+                <button className="w-full text-left transition-colors duration-300 text-gray-700 hover:text-[#0a9ca7] px-8 py-2">
                   LIFAT
                 </button>
               </Link>
               <Link href="/mmi" onClick={closeMenu}>
-                <button className="w-full text-left hover:bg-[#00A8A8] transition-colors duration-300 text-gray-700 hover:text-white px-8 py-2">
+                <button className="w-full text-left transition-colors duration-300 text-gray-700 hover:text-[#0a9ca7] px-8 py-2">
                   MMI
                 </button>
               </Link>
               <Link href="/rt" onClick={closeMenu}>
-                <button className="w-full text-left hover:bg-[#00A8A8] transition-colors duration-300 text-gray-700 hover:text-white px-8 py-2">
+                <button className="w-full text-left  transition-colors duration-300 text-gray-700 hover:text-[#0a9ca7] px-8 py-2">
                   R&T
                 </button>
               </Link>

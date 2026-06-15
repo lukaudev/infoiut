@@ -48,12 +48,14 @@ export default function Galerie() {
           >
             Galerie
           </motion.h1>
+      
           <motion.div
             className="bg-white rounded-lg shadow-lg p-8"
             variants={itemVariants}
             initial="hidden"
             animate="visible"
           >
+
             <p className="text-gray-700 text-lg mb-4">
                Ici, vous pouvez trouver les photos de quelques endroits de l&apos;IUT de Tours à Blois. 
             </p>
