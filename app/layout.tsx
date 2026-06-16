@@ -37,7 +37,7 @@ export default function RootLayout({
       className={cn("h-full", "antialiased", geistSans.variable, geistMono.variable, "font-sans", inter.variable, notoSans.variable)}
     >
       <body className="min-h-full flex flex-col">
-        <Header />
+       <Header />
         <main className="pt-20 flex-1">{children}</main>
       </body>
     </html>

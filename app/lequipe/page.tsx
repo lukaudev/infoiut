@@ -106,7 +106,6 @@ export default function Lequipe() {
     ]
     return (
         <main className="flex min-h-screen flex-col bg-gray-100">
-            <Header />
             <div className="w-full p-8">
                 <div className="max-w-5xl mx-auto">
                     <h1 className="text-4xl font-bold text-gray-800 mb-6">

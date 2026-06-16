@@ -7,6 +7,15 @@ import Footer from "./components/footer";
 import Image from "next/image";
 
 export default function Home() {
+
+  const textVariants = {
+    hidden: {
+      opacity: 0, y: 10,
+      transition: { duration: 0.3 },
+    },
+    visible: { opacity: 1, y: 0 },
+  };
+
   const containerVariants = {
     hidden: { opacity: 0 },
     visible: {
@@ -30,8 +39,7 @@ export default function Home() {
 
   return (
     <main className="flex min-h-screen flex-col bg-gray-100">
-      <Header />
-      
+
       {/* Hero Section */}
       <section className="w-full shadow-2xs shadow-black/10 py-12 bg-gray-50">
         <div className="max-w-7xl mx-auto px-8 lg:px-12">
@@ -46,21 +54,21 @@ export default function Home() {
                   Experience de stage
                 </span>
               </motion.div>
-              
+
               <motion.h1
                 variants={cardVariants}
                 className="text-2xl md:text-5xl font-extrabold text-gray-900 mb-6"
               >
-               Stage à l&apos;IUT
+                Stage à l&apos;IUT
               </motion.h1>
-              
+
               <motion.p
                 variants={cardVariants}
                 className="text-lg text-gray-600 mb-8 leading-relaxed"
               >
                 Découvrez mon expérience de stage à l&apos;INFOIUT et comment elle m&apos;a permis de développer mes compétences professionnelles.
               </motion.p>
-              
+
               <motion.div
                 variants={cardVariants}
                 className="flex gap-4"
@@ -86,7 +94,7 @@ export default function Home() {
               <div className="absolute inset-0 bg-linear-to-br to-teal-400 from-teal-50 rounded-3xl opacity-10 blur-3xl" />
               <div className="relative h-full flex items-center justify-center">
                 <Image
-                  src="/favicon.png"
+                  src="/assets/illustration.png"
                   alt="INFOIUT Reference"
                   width={600}
                   height={400}
@@ -101,34 +109,42 @@ export default function Home() {
       {/*Info Cards Section */}
       <section className="w-full mt-10 shadow-2xs shadow-black/10 py-12 bg-white">
         <div className="max-w-7xl mx-auto px-8 lg:px-12">
+          <motion.p
+            initial="hidden"
+            whileInView="visible"
+            variants={textVariants}
+            className="text-lg font-bold mb-4"
+          >
+            Deitals sur le stage</motion.p>
+
           <motion.div
             initial="hidden"
             whileInView="visible"
             variants={containerVariants}
             className="grid grid-cols-1 md:grid-cols-4 gap-6"
           >
-            <motion.div variants={cardVariants} className="bg-blue-50 rounded-sm p-6 border-l-4 border-blue-500">
+            <motion.div variants={cardVariants} className="shadow-md border rounded-sm p-6 border-t-4 border-blue-500">
               <div className="text-3xl font-bold text-blue-600 mb-2 hidden">3</div>
               <h3 className="text-gray-700 font-semibold">Entreprise d&apos;accueil</h3>
-              <p className="text-sm text-gray-600 hover:text-[#0a9ca7]">IUT de Blois</p>
+              <p className="text-sm text-gray-600">IUT de Blois</p>
             </motion.div>
-            
-            <motion.div variants={cardVariants} className="bg-green-50 rounded-sm p-6 border-l-4 border-green-500">
+
+            <motion.div variants={cardVariants} className="shadow-md border rounded-sm p-6 border-t-4 border-green-500">
               <div className="text-3xl font-bold text-green-600 mb-2 hidden">∞</div>
-              <h3 className="text-gray-700 font-semibold">¨Periode de stage</h3>
-              <p className="text-sm text-gray-600 hover:text-[#0a9ca7]">06 à 27 juin</p>
+              <h3 className="text-gray-700 font-semibold">Periode de stage</h3>
+              <p className="text-sm text-gray-600">06 à 27 juin</p>
             </motion.div>
-            
-            <motion.div variants={cardVariants} className="bg-purple-50 rounded-sm p-6 border-l-4 border-purple-500">
+
+            <motion.div variants={cardVariants} className="shadow-md border rounded-sm p-6 border-t-4 border-purple-500">
               <div className="text-3xl font-bold text-purple-600 mb-2 hidden">📚</div>
               <h3 className="text-gray-700 font-semibold">Mon role</h3>
-              <p className="text-sm text-gray-600 hover:text-[#0a9ca7]">...</p>
+              <p className="text-sm text-gray-600">Observation et Development Web</p>
             </motion.div>
-            
-            <motion.div variants={cardVariants} className="bg-orange-50 rounded-sm p-6 border-l-4 border-orange-500">
+
+            <motion.div variants={cardVariants} className="shadow-md border rounded-sm p-6 border-t-4 border-orange-500">
               <div className="text-3xl font-bold text-orange-600 mb-2 hidden">🎯</div>
               <h3 className="text-gray-700 font-semibold">Objectifs</h3>
-              <p className="text-sm text-gray-600 hover:text-[#0a9ca7]">Avenir professionnel</p>
+              <p className="text-sm text-gray-600">Avenir professionnel</p>
             </motion.div>
           </motion.div>
         </div>
@@ -149,19 +165,19 @@ export default function Home() {
               <h3 className="text-gray-700 font-semibold">Programmes</h3>
               <p className="text-sm text-gray-600 hover:text-[#0a9ca7]">LIFAT, MMI, R&T</p>
             </motion.div>
-            
+
             <motion.div variants={cardVariants} className="bg-green-50 rounded-smp-6 border-l-4 border-green-500">
               <div className="text-3xl font-bold text-green-600 mb-2">∞</div>
               <h3 className="text-gray-700 font-semibold">Opportunités</h3>
               <p className="text-sm text-gray-600 hover:text-[#0a9ca7]">Carrières et projets</p>
             </motion.div>
-            
+
             <motion.div variants={cardVariants} className="bg-purple-50 rounded-smp-6 border-l-4 border-purple-500">
               <div className="text-3xl font-bold text-purple-600 mb-2">📚</div>
               <h3 className="text-gray-700 font-semibold">Formations</h3>
               <p className="text-sm text-gray-600 hover:text-[#0a9ca7]">Programmes détaillés</p>
             </motion.div>
-            
+
             <motion.div variants={cardVariants} className="bg-orange-50 rounded-smp-6 border-l-4 border-orange-500">
               <div className="text-3xl font-bold text-orange-600 mb-2">🎯</div>
               <h3 className="text-gray-700 font-semibold">Objectifs</h3>
@@ -172,7 +188,7 @@ export default function Home() {
       </section>
 
       {/* Programmes Section */}
-      <section id="programmes"hidden  className="w-full bg-gray-50 py-20">
+      <section id="programmes" hidden className="w-full bg-gray-50 py-20">
         <div className="max-w-6xl mx-auto px-8 lg:px-12">
           <motion.div
             initial="hidden"

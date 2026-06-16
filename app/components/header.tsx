@@ -9,13 +9,20 @@ import {
   DropdownMenuItem,
   DropdownMenuTrigger,
 } from "@/components/ui/dropdown-menu";
-import { useState } from "react";
+import { useEffect, useState } from "react";
+import  { usePathname } from "next/navigation";
 
 export default function Header() {
+
+  const [page, setPage] = useState("");
+  const pageRouter = usePathname();
+
   const [isOpen, setIsOpen] = useState(false);
   const [isResearchesOpen, setIsResearchesOpen] = useState(false);
 
   const closeMenu = () => setIsOpen(false);
+
+ 
 
   return (
     <header className="bg-white border-b border-gray-300 fixed top-0 left-0 right-0 z-50 h-20">
@@ -33,6 +40,11 @@ export default function Header() {
 
         {/* Desktop Navigation */}
         <nav className="hidden md:flex items-center justify-end gap-1 button-group h-full">
+          <Link href="/" className="h-full flex items-center">
+            <button className="h-full  rounded cursor-pointer transition-colors duration-300 text-gray-700 hover:text-[#0a9ca7] px-4 flex items-center">
+              Accueil
+            </button>
+          </Link>
           <Link href="/lequipe" className="h-full flex items-center">
             <button className="h-full  rounded cursor-pointer transition-colors duration-300 text-gray-700 hover:text-[#0a9ca7] px-4 flex items-center">
               L&apos;equipe
@@ -45,7 +57,7 @@ export default function Header() {
           </Link>
           <DropdownMenu>
             <DropdownMenuTrigger asChild>
-              <button className="h-full hover:bg-[#00A8A8] rounded cursor-pointer transition-colors duration-300 text-gray-700 hover:text-[#0a9ca7] px-4 flex items-center">
+              <button className={`h-full hover:bg-[#e1ebeb] active:bg-[#e1ebeb] cursor-pointer transition-colors duration-300 text-gray-700 hover:text-[#0a9ca7] px-4 flex items-center outline-0`}>
                 Recherches <span className="ml-1">▾</span>
               </button>
             </DropdownMenuTrigger>
