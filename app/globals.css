@@ -154,3 +154,6 @@
 ::selection{
   background: #0a9da71c; 
 }
+.card-apropos{
+  padding: 10px !important;
+}

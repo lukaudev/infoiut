@@ -113,10 +113,18 @@ export default function Home() {
             initial="hidden"
             whileInView="visible"
             variants={textVariants}
-            className="text-lg font-bold mb-4"
+            className="text-lg font-bold mb-2"
           >
-            Details sur le stage</motion.p>
-
+            Details sur le stage
+          </motion.p>
+          <motion.p
+            initial="hidden"
+            whileInView="visible"
+            variants={textVariants}
+            className="text-sm mb-4"
+          >
+            Informations sur le stage
+          </motion.p>
           <motion.div
             initial="hidden"
             whileInView="visible"
@@ -150,27 +158,36 @@ export default function Home() {
         </div>
       </section>
 
-      <motion.div className="w-full bg-gray-50 flex p-10" variants={cardVariants} initial="hidden" whileInView="visible">
-        <div className="max-w-6xl mx-auto py-10">
-          <motion.p
-            initial="hidden"
-            whileInView="visible"
-            variants={textVariants}
-            className="text-lg font-bold py-10"
-          >A propos de moi</motion.p>
-          <motion.p
-            initial="hidden"
-            whileInView="visible"
-            variants={textVariants}
-            className="text-lg py-10"
-          >
-            Etudient en informatique passioné par le développment et les nouvelles technlogies. Ce stage m&apos;a permis de mettre en pratique mes connaissances et de reveler des défis concrets au sein d&apos;un environnement académique.
-            <Link href={"https://lukau.vercel.app/"}>
-              <Button className="bg-[#0a9ca7] hover:bg-[#0a7d85]">En savoir plus sur moi at</Button>
-            </Link>
-          </motion.p>
-        </div>
-      </motion.div>
+      {/* A propos de moi */}
+      <section className="p-15 bg-white flex items-center justify-center flex-col">
+       
+        <motion.div className="pb-10 card-apropos px-20 flex items-center h-32 " variants={cardVariants} initial="hidden" whileInView="visible">
+          <div className="max-w-6xl mx-auto">
+            <motion.p
+              initial="hidden"
+              whileInView="visible"
+              variants={textVariants}
+              className="text-2xl font-bold mb-4 text-center"
+            >A propos de moi</motion.p>
+            <motion.p
+              initial="hidden"
+              whileInView="visible"
+              variants={textVariants}
+              className="text-xl mb-5 text-center"
+            >
+              Etudient en informatique passioné par le développment et les nouvelles technlogies. Ce stage m&apos;a permis de mettre en pratique mes connaissances et de reveler des défis concrets au sein d&apos;un environnement académique.
+              
+              <Link href="https://lukau.vercel.app/" >
+                <button className="text-sm bg-teal-600 cursor-pointer hover:bg-teal-700 text-white px-8 py-3 rounded-lg font-semibold transition-colors flex items-center gap-2 mt-4">
+                  <span>→</span> Découvrez mon parcours
+                </button>
+              </Link>
+
+            </motion.p>
+          </div>
+        </motion.div>
+
+      </section>
 
       {/* Parcours Section */}
       <section className=" w-full bg-white py-20">
