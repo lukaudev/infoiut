@@ -1,10 +1,10 @@
 "use client";
 
-import Header from "./components/header";
 import Link from "next/link";
 import { motion } from "framer-motion";
 import Footer from "./components/footer";
 import Image from "next/image";
+import { Button } from "@/components/ui/button";
 
 export default function Home() {
 
@@ -115,7 +115,7 @@ export default function Home() {
             variants={textVariants}
             className="text-lg font-bold mb-4"
           >
-            Deitals sur le stage</motion.p>
+            Details sur le stage</motion.p>
 
           <motion.div
             initial="hidden"
@@ -150,133 +150,30 @@ export default function Home() {
         </div>
       </section>
 
-
-      {/* Info Cards Section */}
-      <section className="hidden w-full bg-white py-16">
-        <div className="max-w-6xl mx-auto px-8 lg:px-12">
-          <motion.div
+      <motion.div className="w-full bg-gray-50 flex p-10" variants={cardVariants} initial="hidden" whileInView="visible">
+        <div className="max-w-6xl mx-auto py-10">
+          <motion.p
             initial="hidden"
             whileInView="visible"
-            variants={containerVariants}
-            className="grid grid-cols-1 md:grid-cols-4 gap-6"
-          >
-            <motion.div variants={cardVariants} className="bg-blue-50 rounded-smp-6 border-l-4 border-blue-500">
-              <div className="text-3xl font-bold text-blue-600 mb-2">3</div>
-              <h3 className="text-gray-700 font-semibold">Programmes</h3>
-              <p className="text-sm text-gray-600 hover:text-[#0a9ca7]">LIFAT, MMI, R&T</p>
-            </motion.div>
-
-            <motion.div variants={cardVariants} className="bg-green-50 rounded-smp-6 border-l-4 border-green-500">
-              <div className="text-3xl font-bold text-green-600 mb-2">∞</div>
-              <h3 className="text-gray-700 font-semibold">Opportunités</h3>
-              <p className="text-sm text-gray-600 hover:text-[#0a9ca7]">Carrières et projets</p>
-            </motion.div>
-
-            <motion.div variants={cardVariants} className="bg-purple-50 rounded-smp-6 border-l-4 border-purple-500">
-              <div className="text-3xl font-bold text-purple-600 mb-2">📚</div>
-              <h3 className="text-gray-700 font-semibold">Formations</h3>
-              <p className="text-sm text-gray-600 hover:text-[#0a9ca7]">Programmes détaillés</p>
-            </motion.div>
-
-            <motion.div variants={cardVariants} className="bg-orange-50 rounded-smp-6 border-l-4 border-orange-500">
-              <div className="text-3xl font-bold text-orange-600 mb-2">🎯</div>
-              <h3 className="text-gray-700 font-semibold">Objectifs</h3>
-              <p className="text-sm text-gray-600 hover:text-[#0a9ca7]">Avenir professionnel</p>
-            </motion.div>
-          </motion.div>
-        </div>
-      </section>
-
-      {/* Programmes Section */}
-      <section id="programmes" hidden className="w-full bg-gray-50 py-20">
-        <div className="max-w-6xl mx-auto px-8 lg:px-12">
-          <motion.div
+            variants={textVariants}
+            className="text-lg font-bold py-10"
+          >A propos de moi</motion.p>
+          <motion.p
             initial="hidden"
             whileInView="visible"
-            variants={containerVariants}
+            variants={textVariants}
+            className="text-lg py-10"
           >
-            <motion.div variants={cardVariants} className="mb-12">
-              <h2 className="text-4xl font-bold text-gray-900 mb-4">
-                Nos Programmes
-              </h2>
-              <div className="w-16 h-1 bg-gradient-to-r from-teal-500 to-blue-500 rounded" />
-            </motion.div>
-
-            <motion.div
-              className="grid grid-cols-1 md:grid-cols-3 gap-8"
-              variants={containerVariants}
-              initial="hidden"
-              whileInView="visible"
-            >
-              <Link href="/lifat">
-                <motion.div
-                  className="bg-white rounded-2xl overflow-hidden shadow-lg hover:shadow-2xl transition-all cursor-pointer group"
-                  variants={cardVariants}
-                  whileHover={{ y: -8 }}
-                >
-                  <div className="bg-gradient-to-br from-blue-400 to-blue-600 h-32" />
-                  <div className="p-6">
-                    <h3 className="text-2xl font-bold text-blue-700 mb-3">LIFAT</h3>
-                    <p className="text-gray-600">
-                      Laboratoire d&apos;Informatique Fondamentale et Appliquée de Tours
-                    </p>
-                    <div className="mt-4 pt-4 border-t border-gray-200">
-                      <span className="text-teal-600 font-semibold group-hover:text-teal-700">
-                        En savoir plus →
-                      </span>
-                    </div>
-                  </div>
-                </motion.div>
-              </Link>
-
-              <Link href="/mmi">
-                <motion.div
-                  className="bg-white rounded-2xl overflow-hidden shadow-lg hover:shadow-2xl transition-all cursor-pointer group"
-                  variants={cardVariants}
-                  whileHover={{ y: -8 }}
-                >
-                  <div className="bg-gradient-to-br from-green-400 to-green-600 h-32" />
-                  <div className="p-6">
-                    <h3 className="text-2xl font-bold text-green-700 mb-3">MMI</h3>
-                    <p className="text-gray-600">
-                      Métiers du Multimédia et de l&apos;Internet
-                    </p>
-                    <div className="mt-4 pt-4 border-t border-gray-200">
-                      <span className="text-teal-600 font-semibold group-hover:text-teal-700">
-                        En savoir plus →
-                      </span>
-                    </div>
-                  </div>
-                </motion.div>
-              </Link>
-
-              <Link href="/rt">
-                <motion.div
-                  className="bg-white rounded-2xl overflow-hidden shadow-lg hover:shadow-2xl transition-all cursor-pointer group"
-                  variants={cardVariants}
-                  whileHover={{ y: -8 }}
-                >
-                  <div className="bg-gradient-to-br from-purple-400 to-purple-600 h-32" />
-                  <div className="p-6">
-                    <h3 className="text-2xl font-bold text-purple-700 mb-3">R&T</h3>
-                    <p className="text-gray-600">
-                      Réseaux et Télécommunications
-                    </p>
-                    <div className="mt-4 pt-4 border-t border-gray-200">
-                      <span className="text-teal-600 font-semibold group-hover:text-teal-700">
-                        En savoir plus →
-                      </span>
-                    </div>
-                  </div>
-                </motion.div>
-              </Link>
-            </motion.div>
-          </motion.div>
+            Etudient en informatique passioné par le développment et les nouvelles technlogies. Ce stage m&apos;a permis de mettre en pratique mes connaissances et de reveler des défis concrets au sein d&apos;un environnement académique.
+            <Link href={"https://lukau.vercel.app/"}>
+              <Button className="bg-[#0a9ca7] hover:bg-[#0a7d85]">En savoir plus sur moi at</Button>
+            </Link>
+          </motion.p>
         </div>
-      </section>
+      </motion.div>
 
-      {/* Journey Section */}
-      <section className="hidden w-full bg-white py-20">
+      {/* Parcours Section */}
+      <section className=" w-full bg-white py-20">
         <div className="max-w-6xl mx-auto px-8 lg:px-12">
           <motion.div
             initial="hidden"
@@ -285,30 +182,31 @@ export default function Home() {
           >
             <motion.div variants={cardVariants} className="mb-16 text-center">
               <h2 className="text-4xl font-bold text-gray-900 mb-4">
-                Votre Parcours à l&apos;IUT
+                Mon Parcours à l&apos;IUT
               </h2>
               <p className="text-gray-600 text-lg max-w-2xl mx-auto">
-                Découvrez les étapes clés de votre expérience à l&apos;IUT de Tours
+                Découvrez les étapes clés de mon expérience à l&apos;IUT de Blois
               </p>
             </motion.div>
-
             <motion.div
               className="grid grid-cols-1 md:grid-cols-4 gap-6"
               variants={containerVariants}
             >
               {[
                 { number: 1, title: "Admission", desc: "Inscription et bienvenue" },
-                { number: 2, title: "Formation", desc: "Apprentissage et projets" },
-                { number: 3, title: "Expérience", desc: "Stage en entreprise" },
-                { number: 4, title: "Avenir", desc: "Opportunités carrière" },
+                { number: 2, title: "Integration", desc: "Decouvert de l'entreprise" },
+                { number: 3, title: "Presentantion", desc: "Presentantion de chaque endroit" },
+                { number: 4, title: "Mission", desc: "Mission" },
+                { number: 5, title: "Expérience", desc: "Stage en entreprise" },
+                { number: 6, title: "Avenir", desc: "Opportunités carrière" },
               ].map((item) => (
                 <motion.div
                   key={item.number}
                   variants={cardVariants}
                   className="relative"
                 >
-                  <div className="bg-gradient-to-br from-teal-50 to-blue-50 rounded-smp-8 text-center">
-                    <div className="inline-flex items-center justify-center w-16 h-16 bg-gradient-to-br from-teal-500 to-blue-500 rounded-full text-white font-bold text-2xl mb-4">
+                  <div className="bg-linear-to-br from-teal-50 to-blue-50 p-8 transition-all duration-800 text-center px-2 py-4 rounded-md">
+                    <div className="inline-flex items-center justify-center w-16 h-16 bg-linear-to-br from-teal-500 to-blue-500 rounded-full text-white font-bold text-2xl mb-4">
                       {item.number}
                     </div>
                     <h3 className="text-xl font-bold text-gray-900 mb-2">
@@ -327,7 +225,6 @@ export default function Home() {
           </motion.div>
         </div>
       </section>
-
       <Footer />
     </main>
   );
