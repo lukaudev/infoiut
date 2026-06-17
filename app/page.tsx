@@ -277,10 +277,11 @@ export default function Home() {
               variants={containerVariants}
             >
               {[
-                { title: "Activités 1", desc: "Participation aux cours" },
-                { title: "Activités 2", desc: "Améliorer mon portefeuille" },
-                { title: "Activités 3", desc: "Développement d'un site web présentant le stage à l'IUT" },
-                { title: "Activités 4", desc: "Observation des projets" },
+                { title: "Activité 1", desc: "Participation aux cours" },
+                { title: "Activité 2", desc: "Améliorer mon portefeuille" },
+                { title: "Activité 3", desc: "Développement d'un site web présentant le stage à l'IUT" },
+                { title: "Activité 4", desc: "Observation des projets" },
+                { title: "Activité 5", desc: "Recherches sur MMI, LIFAT et R&T"}
               ].map((item, index) => (
                 <motion.div
                   key={index}

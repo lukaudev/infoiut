@@ -35,6 +35,33 @@ export default function Galerie() {
     },
   };
 
+  const galleryItems = [
+    {
+      title: 'IUT de Blois',
+      src: '/assets/iutblois.jpg',
+      alt: 'Bâtiment B',
+      caption: 'St. place Jean Jeaures - IUT Blois',
+    },
+    {
+      title: 'Entrée',
+      src: '/assets/entre.jpg',
+      alt: 'Bâtiment A',
+      caption: 'Entrée et sortie',
+    },
+    {
+      title: 'Rez-de-chaussée',
+      src: '/assets/rezdechaussee.jpg',
+      alt: 'Rez de chaussée',
+      caption: 'Rez de chaussee',
+    },
+    {
+      title: '3e Etage',
+      src: '/assets/departinfo.jpg',
+      alt: 'Département Informatique',
+      caption: 'Departement Informatique',
+    },
+  ];
+
   return (
     <main className="flex min-h-screen flex-col bg-gray-100">
       <Header />
@@ -61,68 +88,32 @@ export default function Galerie() {
             </p>
             
             <motion.div
-              className="mt-8 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6"
+              className="mt-8 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6"
               variants={containerVariants}
               initial="hidden"
               animate="visible"
             >
-                <motion.div className="mb-6" variants={itemVariants}>
-                    <h2 className="text-2xl font-semibold text-gray-800 mb-4">Accueil</h2>
-                    <figure className="w-full bg-gray-50 border border-gray-100">
-                        <Image  src="/assets/lifat.png" alt="Bâtiment B" className="w-full" width={100} height={150} />
-                        <figcaption className="text-sm text-gray-500 mt-2">Bâtiment B - Accueil</figcaption>
-                    </figure>
-                </motion.div>
-                <motion.div className="mb-6" variants={itemVariants}>
-                    <h2 className="text-2xl font-semibold text-gray-800 mb-4">Secretariat</h2>
-                    <figure className="w-full bg-gray-50 border border-gray-100">
-                        <Image src="/assets/lifat.png" alt="Bâtiment A" className="w-full" width={100} height={150} />
-                        <figcaption className="text-sm text-gray-500 mt-2">Bâtiment A - Secrétariat</figcaption>
-                    </figure>
-                </motion.div>
-                <motion.div className="mb-6" variants={itemVariants}>
-                    <h2 className="text-2xl font-semibold text-gray-800 mb-4">Salle A</h2>
-                    <figure className="w-full bg-gray-50 border border-gray-100">
-                        <Image  src="/assets/lifat.png" alt="Bâtiment B" className="w-full" width={100} height={150} />
-                        <figcaption className="text-sm text-gray-500 mt-2">Bâtiment B - Salle A</figcaption>
-                    </figure>
-                </motion.div>
-                <motion.div className="mb-6" variants={itemVariants}>
-                    <h2 className="text-2xl font-semibold text-gray-800 mb-4">Secretariat</h2>
-                    <figure className="w-full bg-gray-50 border border-gray-100">
-                        <Image src="/assets/lifat.png" alt="Bâtiment A" className="w-full" width={100} height={150} />
-                        <figcaption className="text-sm text-gray-500 mt-2">Bâtiment A - Secrétariat</figcaption>
-                    </figure>
-                </motion.div>
-                <motion.div className="mb-6" variants={itemVariants}>
-                    <h2 className="text-2xl font-semibold text-gray-800 mb-4">Salle A</h2>
-                    <figure className="w-full bg-gray-50 border border-gray-100">
-                        <Image src="/assets/lifat.png" alt="Bâtiment C" className="w-full" width={100} height={150} />
-                        <figcaption className="text-sm text-gray-500 mt-2">Bâtiment C - Salle A</figcaption>
-                    </figure>
-                </motion.div>
-
-                <motion.div className="mb-6" variants={itemVariants}>
-                    <h2 className="text-2xl font-semibold text-gray-800 mb-4">Accueil</h2>
-                    <figure className="w-full bg-gray-50 border border-gray-100">
-                        <Image  src="/assets/lifat.png" alt="Bâtiment B" className="w-full" width={100} height={150} />
-                        <figcaption className="text-sm text-gray-500 mt-2">Bâtiment B - Accueil</figcaption>
-                    </figure>
-                </motion.div>
-                <motion.div className="mb-6" variants={itemVariants}>
-                    <h2 className="text-2xl font-semibold text-gray-800 mb-4">Secretariat</h2>
-                    <figure className="w-full bg-gray-50 border border-gray-100">
-                        <Image src="/assets/lifat.png" alt="Bâtiment A" className="w-full" width={100} height={150} />
-                        <figcaption className="text-sm text-gray-500 mt-2">Bâtiment A - Secrétariat</figcaption>
-                    </figure>
-                </motion.div>
-                <motion.div className="mb-6" variants={itemVariants}>
-                    <h2 className="text-2xl font-semibold text-gray-800 mb-4">Salle A</h2>
-                    <figure className="w-full bg-gray-50 border border-gray-100">
-                        <Image src="/assets/lifat.png" alt="Bâtiment C" className="w-full" width={100} height={150} />
-                        <figcaption className="text-sm text-gray-500 mt-2">Bâtiment C - Salle A</figcaption>
-                    </figure>
-                </motion.div>
+              {galleryItems.map((item, index) => (
+                <motion.figure
+                  key={index}
+                  className="flex flex-col overflow-hidden rounded-lg border border-gray-100 bg-gray-50 shadow-sm"
+                  variants={itemVariants}
+                >
+                  <div className="relative h-72 w-full bg-gray-200">
+                    <Image
+                      src={item.src}
+                      alt={item.alt}
+                      fill
+                      className="object-cover"
+                      sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
+                    />
+                  </div>
+                  <div className="p-5">
+                    <h2 className="text-xl font-semibold text-gray-800 mb-2">{item.title}</h2>
+                    <figcaption className="text-sm text-gray-500">{item.caption}</figcaption>
+                  </div>
+                </motion.figure>
+              ))}
             </motion.div>
           </motion.div>
         </div>
