@@ -173,8 +173,6 @@ export default function Home() {
           </motion.div>
         </div>
       </section>
-
-
       {/* A propos de moi */}
       <section className="p-15 bg-white flex items-center justify-center flex-col cardhover">
         <motion.div className="pb-10 card-apropos px-20 flex items-center h-32 " variants={cardVariants} initial="hidden" whileInView="visible">
@@ -189,10 +187,10 @@ export default function Home() {
               initial="hidden"
               whileInView="visible"
               variants={textVariants}
-              className="text-xl mb-5 text-center flex items-center justify-center flex-col"
+              className="text-xl mb-5 text-center flex items-center justify-center flex-col text-gray-700"
             >
               Etudient en informatique passioné par le développment et les nouvelles technlogies. Ce stage m&apos;a permis de mettre en pratique mes connaissances et de reveler des défis concrets au sein d&apos;un environnement académique.
-              <Link href="https://lukau.vercel.app/" target="_blank">
+              <Link href="https://lukau.vercel.app/" target="_blank" className="mt-4">
                 <button className="text-sm bg-teal-600 cursor-pointer hover:bg-teal-700 text-white px-8 py-3 rounded-lg font-semibold transition-colors flex items-center gap-2 mt-4">
                   En savoir plus sur moi
                   <span>→</span>
@@ -203,15 +201,15 @@ export default function Home() {
           </div>
         </motion.div>
       </section>
-
       {/* Parcours Section */}
       <section className=" w-full bg-white py-20">
-        <div className="max-w-6xl mx-auto px-8 lg:px-12">
           <motion.div
             initial="hidden"
             whileInView="visible"
             variants={containerVariants}
           >
+        <div className="max-w-6xl mx-auto px-8 lg:px-12">
+        
             <motion.div variants={cardVariants} className="mb-16 text-center">
               <h2 className="text-4xl font-bold text-gray-900 mb-4">
                 Mon Parcours à l&apos;IUT
@@ -237,8 +235,8 @@ export default function Home() {
                   variants={cardVariants}
                   className="relative"
                 >
-                  <div className="bg-linear-to-br from-teal-50 to-blue-50 p-8 transition-all duration-800 text-center px-2 py-4 rounded-md cardhover">
-                    <div className="inline-flex items-center justify-center w-16 h-16 bg-linear-to-br from-teal-500 to-blue-500 rounded-full text-white font-bold text-2xl mb-4">
+                  <div className=" p-8 transition-all duration-800 text-center px-2 py-4 rounded-md cardhover bg-gray-50 border border-gray-200">
+                    <div className="inline-flex items-center justify-center w-16 h-16 bg-linear-to-br from-teal-500 to-gray-500  text-white font-bold text-2xl mb-4 rounded-full">
                       {item.number}
                     </div>
                     <h3 className="text-xl font-bold text-gray-900 mb-2">
@@ -251,6 +249,50 @@ export default function Home() {
                   {item.number < 4 && (
                     <div className="hidden md:block absolute top-1/2 -right-6 w-12 h-0.5 bg-gradient-to-r from-teal-500 to-transparent" />
                   )}
+                </motion.div>
+              ))}
+            </motion.div>
+        </div>
+        
+          </motion.div>
+      </section>
+
+      <section className="w-full  py-20 bg-gray-300">
+        <div className="max-w-6xl mx-auto px-8 lg:px-12">
+          <motion.div
+            initial="hidden"
+            whileInView="visible"
+            variants={containerVariants}
+          >
+            <motion.div variants={cardVariants} className="mb-16 text-center">
+              <h2 className="text-4xl font-bold text-gray-900 mb-4">
+               Qu'est-ce que j&apos;ai fait pendant mon stage ?
+              </h2>
+              <p className="text-gray-600 text-lg max-w-2xl mx-auto">
+                Découvrez les projets et les missions que j&apos;ai réalisés pendant mon stage à l&apos;IUT de Blois
+              </p>
+            </motion.div>
+            <motion.div
+              className="grid grid-cols-1 md:grid-cols-3 gap-6"
+              variants={containerVariants}
+            >
+              {[
+                { title: "Mission 1", desc: "Participation aux cours" },
+                { title: "Mission 2", desc: "Améliorer mon portefeuille" },
+                { title: "Mission 3", desc: "Développement d'un site web présentant le stage à l'IUT" },
+                { title: "Mission 4", desc: "Observation des projets" },
+              ].map((item, index) => (
+                <motion.div
+                  key={index}
+                  variants={cardVariants}
+                  className="bg-linear-to-br from-teal-50 to-blue-50 p-8 transition-all duration-800 text-center px-2 py-4 rounded-md cardhover"
+                >
+                  <h3 className="text-xl font-bold text-gray-900 mb-2">
+                    {item.title}
+                  </h3>
+                  <p className="text-gray-600 text-sm">
+                    {item.desc}
+                  </p>
                 </motion.div>
               ))}
             </motion.div>
