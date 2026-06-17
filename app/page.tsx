@@ -257,7 +257,7 @@ export default function Home() {
           </motion.div>
       </section>
 
-      <section className="w-full  py-20 bg-gray-300">
+      <section className="w-full  py-20 bg-gray-300  bg-imageiut">
         <div className="max-w-6xl mx-auto px-8 lg:px-12">
           <motion.div
             initial="hidden"
@@ -285,8 +285,8 @@ export default function Home() {
                 <motion.div
                   key={index}
                   variants={cardVariants}
-                  className="bg-linear-to-br from-teal-50 to-blue-50 p-8 transition-all duration-800 text-center px-2 py-4 rounded-md cardhover"
-                >
+                  className="bg-linear-to-br from-teal-50 to-blue-50 p-8 transition-all duration-800 text-center px-2 py-4 rounded-md cardhover">
+                
                   <h3 className="text-xl font-bold text-gray-900 mb-2">
                     {item.title}
                   </h3>
