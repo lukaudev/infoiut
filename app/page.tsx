@@ -75,7 +75,7 @@ export default function Home() {
               >
                 <Link href="#programmes">
                   <button className="text-md bg-teal-600 cursor-pointer hover:bg-teal-700 text-white px-8 py-3 rounded-lg font-semibold transition-colors flex items-center gap-2">
-                    <span>→</span> Découvrez mon parcours
+                    Découvrez mon parcours  <span>→</span>
                   </button>
                 </Link>
                 <button className="text-md border-2 cursor-pointer border-gray-300 text-gray-700 hover:border-gray-400 px-8 py-3 rounded-lg font-semibold transition-colors">
@@ -92,7 +92,7 @@ export default function Home() {
               className="hidden lg:block relative h-96"
             >
               <div className="absolute inset-0 bg-linear-to-br to-teal-400 from-teal-50 rounded-3xl opacity-10 blur-3xl" />
-              <div className="relative h-full flex items-center justify-center">
+              <div className="relative h-full flex items-center justify-center cardhover">
                 <Image
                   src="/assets/illustration.png"
                   alt="INFOIUT Reference"
@@ -131,37 +131,49 @@ export default function Home() {
             variants={containerVariants}
             className="grid grid-cols-1 md:grid-cols-4 gap-6"
           >
-            <motion.div variants={cardVariants} className="shadow-md border rounded-sm p-6 border-t-4 border-blue-500">
-              <div className="text-3xl font-bold text-blue-600 mb-2 hidden">3</div>
+            <motion.div variants={cardVariants} className="shadow-md border rounded-sm p-6 border-t-4 border-blue-500 cardhover">
+              <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="size-6 mb-4">
+                <path strokeLinecap="round" strokeLinejoin="round" d="M2.25 21h19.5m-18-18v18m10.5-18v18m6-13.5V21M6.75 6.75h.75m-.75 3h.75m-.75 3h.75m3-6h.75m-.75 3h.75m-.75 3h.75M6.75 21v-3.375c0-.621.504-1.125 1.125-1.125h2.25c.621 0 1.125.504 1.125 1.125V21M3 3h12m-.75 4.5H21m-3.75 3.75h.008v.008h-.008v-.008Zm0 3h.008v.008h-.008v-.008Zm0 3h.008v.008h-.008v-.008Z" />
+              </svg>
+
               <h3 className="text-gray-700 font-semibold">Entreprise d&apos;accueil</h3>
               <p className="text-sm text-gray-600">IUT de Blois</p>
             </motion.div>
 
-            <motion.div variants={cardVariants} className="shadow-md border rounded-sm p-6 border-t-4 border-green-500">
-              <div className="text-3xl font-bold text-green-600 mb-2 hidden">∞</div>
+            <motion.div variants={cardVariants} className="shadow-md border rounded-sm p-6 border-t-4 border-green-500 cardhover">
+              <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="size-6 mb-4">
+                <path strokeLinecap="round" strokeLinejoin="round" d="M6.75 3v2.25M17.25 3v2.25M3 18.75V7.5a2.25 2.25 0 0 1 2.25-2.25h13.5A2.25 2.25 0 0 1 21 7.5v11.25m-18 0A2.25 2.25 0 0 0 5.25 21h13.5A2.25 2.25 0 0 0 21 18.75m-18 0v-7.5A2.25 2.25 0 0 1 5.25 9h13.5A2.25 2.25 0 0 1 21 11.25v7.5m-9-6h.008v.008H12v-.008ZM12 15h.008v.008H12V15Zm0 2.25h.008v.008H12v-.008ZM9.75 15h.008v.008H9.75V15Zm0 2.25h.008v.008H9.75v-.008ZM7.5 15h.008v.008H7.5V15Zm0 2.25h.008v.008H7.5v-.008Zm6.75-4.5h.008v.008h-.008v-.008Zm0 2.25h.008v.008h-.008V15Zm0 2.25h.008v.008h-.008v-.008Zm2.25-4.5h.008v.008H16.5v-.008Zm0 2.25h.008v.008H16.5V15Z" />
+              </svg>
+
               <h3 className="text-gray-700 font-semibold">Periode de stage</h3>
               <p className="text-sm text-gray-600">06 à 27 juin</p>
             </motion.div>
 
-            <motion.div variants={cardVariants} className="shadow-md border rounded-sm p-6 border-t-4 border-purple-500">
-              <div className="text-3xl font-bold text-purple-600 mb-2 hidden">📚</div>
+            <motion.div variants={cardVariants} className="shadow-md border rounded-sm p-6 border-t-4 border-purple-500 cardhover">
+              <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="size-6 mb-4">
+                <path strokeLinecap="round" strokeLinejoin="round" d="M12 6.042A8.967 8.967 0 0 0 6 3.75c-1.052 0-2.062.18-3 .512v14.25A8.987 8.987 0 0 1 6 18c2.305 0 4.408.867 6 2.292m0-14.25a8.966 8.966 0 0 1 6-2.292c1.052 0 2.062.18 3 .512v14.25A8.987 8.987 0 0 0 18 18a8.967 8.967 0 0 0-6 2.292m0-14.25v14.25" />
+              </svg>
+
               <h3 className="text-gray-700 font-semibold">Mon role</h3>
               <p className="text-sm text-gray-600">Observation et Development Web</p>
             </motion.div>
 
-            <motion.div variants={cardVariants} className="shadow-md border rounded-sm p-6 border-t-4 border-orange-500">
-              <div className="text-3xl font-bold text-orange-600 mb-2 hidden">🎯</div>
+            <motion.div variants={cardVariants} className="shadow-md border rounded-sm p-6 border-t-4 border-orange-500 cardhover">
+              <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="size-6 mb-4">
+                <path strokeLinecap="round" strokeLinejoin="round" d="m11.25 9-3 3m0 0 3 3m-3-3h7.5M21 12a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z" />
+              </svg>
+
+
               <h3 className="text-gray-700 font-semibold">Objectifs</h3>
               <p className="text-sm text-gray-600">Avenir professionnel</p>
             </motion.div>
           </motion.div>
         </div>
       </section>
-      
+
 
       {/* A propos de moi */}
-      <section className="p-15 bg-white flex items-center justify-center flex-col">
-       
+      <section className="p-15 bg-white flex items-center justify-center flex-col cardhover">
         <motion.div className="pb-10 card-apropos px-20 flex items-center h-32 " variants={cardVariants} initial="hidden" whileInView="visible">
           <div className="max-w-6xl mx-auto">
             <motion.p
@@ -170,24 +182,23 @@ export default function Home() {
               variants={textVariants}
               className="text-2xl font-bold mb-4 text-center"
             >A propos de moi</motion.p>
-            <motion.p
+            <motion.div
               initial="hidden"
               whileInView="visible"
               variants={textVariants}
-              className="text-xl mb-5 text-center"
+              className="text-xl mb-5 text-center flex items-center justify-center flex-col"
             >
               Etudient en informatique passioné par le développment et les nouvelles technlogies. Ce stage m&apos;a permis de mettre en pratique mes connaissances et de reveler des défis concrets au sein d&apos;un environnement académique.
-              
-              <Link href="https://lukau.vercel.app/" >
+              <Link href="https://lukau.vercel.app/" target="_blank">
                 <button className="text-sm bg-teal-600 cursor-pointer hover:bg-teal-700 text-white px-8 py-3 rounded-lg font-semibold transition-colors flex items-center gap-2 mt-4">
-                  <span>→</span> Découvrez mon parcours
+                  En savoir plus sur moi
+                  <span>→</span>
                 </button>
               </Link>
 
-            </motion.p>
+            </motion.div>
           </div>
         </motion.div>
-
       </section>
 
       {/* Parcours Section */}
@@ -214,7 +225,7 @@ export default function Home() {
                 { number: 1, title: "Admission", desc: "Inscription et bienvenue" },
                 { number: 2, title: "Integration", desc: "Decouvert de l'entreprise" },
                 { number: 3, title: "Presentantion", desc: "Presentantion de chaque endroit" },
-                { number: 4, title: "Mission", desc: "Mission" },
+                { number: 4, title: "Mission", desc: "1ere mission" },
                 { number: 5, title: "Expérience", desc: "Stage en entreprise" },
                 { number: 6, title: "Avenir", desc: "Opportunités carrière" },
               ].map((item) => (
@@ -223,7 +234,7 @@ export default function Home() {
                   variants={cardVariants}
                   className="relative"
                 >
-                  <div className="bg-linear-to-br from-teal-50 to-blue-50 p-8 transition-all duration-800 text-center px-2 py-4 rounded-md">
+                  <div className="bg-linear-to-br from-teal-50 to-blue-50 p-8 transition-all duration-800 text-center px-2 py-4 rounded-md cardhover">
                     <div className="inline-flex items-center justify-center w-16 h-16 bg-linear-to-br from-teal-500 to-blue-500 rounded-full text-white font-bold text-2xl mb-4">
                       {item.number}
                     </div>

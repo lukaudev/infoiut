@@ -28,13 +28,13 @@ export default function Header() {
     <header className="bg-white border-b border-gray-300 fixed top-0 left-0 right-0 z-50 h-20">
       <div className="flex items-center justify-between h-full px-4 md:px-12">
         {/* Logo */}
-        <Link href="/" onClick={closeMenu} className="">
+        <Link href="/" onClick={closeMenu} >
           <Image
             src="/favicon.png"
             alt="Logo"
             width={250}
             height={250}
-            className="inline-block w-auto h-25"
+            className="inline-block w-auto h-25 enstage"
           />
         </Link>
 
