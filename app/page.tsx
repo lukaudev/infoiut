@@ -157,6 +157,7 @@ export default function Home() {
           </motion.div>
         </div>
       </section>
+      
 
       {/* A propos de moi */}
       <section className="p-15 bg-white flex items-center justify-center flex-col">
