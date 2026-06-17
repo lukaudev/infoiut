@@ -16,13 +16,9 @@ export default function Header() {
 
   const [page, setPage] = useState("");
   const pageRouter = usePathname();
-
   const [isOpen, setIsOpen] = useState(false);
   const [isResearchesOpen, setIsResearchesOpen] = useState(false);
-
   const closeMenu = () => setIsOpen(false);
-
- 
 
   return (
     <header className="bg-white border-b border-gray-300 fixed top-0 left-0 right-0 z-50 h-20">
@@ -80,7 +76,6 @@ export default function Header() {
             </DropdownMenuContent>
           </DropdownMenu>
         </nav>
-
         {/* Mobile Menu Button */}
         <button
           onClick={() => setIsOpen(!isOpen)}
@@ -102,7 +97,6 @@ export default function Header() {
           </svg>
         </button>
       </div>
-
       {/* Mobile Menu Overlay */}
       {isOpen && (
         <div

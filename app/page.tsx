@@ -38,7 +38,7 @@ export default function Home() {
 
 
   return (
-    <main className="flex min-h-screen flex-col bg-gray-100">
+    <main className="flex min-h-screen flex-col bg-gray-100 overflow-hidden">
 
       {/* Hero Section */}
       <section className="w-full shadow-2xs shadow-black/10 py-12 bg-gray-50">
@@ -71,18 +71,18 @@ export default function Home() {
 
               <motion.div
                 variants={cardVariants}
-                className="flex gap-4"
+                className="flex flex-col sm:flex-row gap-4"
               >
                 <Link href="#programmes">
-                  <button className="text-md bg-teal-600 cursor-pointer hover:bg-teal-700 text-white px-8 py-3 rounded-lg font-semibold transition-colors flex items-center">
+                  <button className="w-full sm:w-auto text-md bg-teal-600 cursor-pointer hover:bg-teal-700 text-white px-6 py-3 rounded-lg font-semibold transition-colors flex items-center justify-center">
                     Découvrez mon parcours  <span>→</span>
                   </button>
                 </Link>
-                <button className="text-md border-2 cursor-pointer border-gray-300 text-gray-700 hover:border-gray-400 px-8 py-3 rounded-lg font-semibold transition-colors flex items-center gap-2">
-                  <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="size-6">
-  <path strokeLinecap="round" strokeLinejoin="round" d="M3 16.5v2.25A2.25 2.25 0 0 0 5.25 21h13.5A2.25 2.25 0 0 0 21 18.75V16.5M16.5 12 12 16.5m0 0L7.5 12m4.5 4.5V3" />
-</svg>
-                   <span>Télécharger mon rapport</span>
+                <button className="w-full sm:w-auto text-md border-2 cursor-pointer border-gray-300 text-gray-700 hover:border-gray-400 px-6 py-3 rounded-lg font-semibold transition-colors flex items-center justify-center gap-2">
+                  <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="h-5 w-5 sm:h-6 sm:w-6">
+                    <path strokeLinecap="round" strokeLinejoin="round" d="M3 16.5v2.25A2.25 2.25 0 0 0 5.25 21h13.5A2.25 2.25 0 0 0 21 18.75V16.5M16.5 12 12 16.5m0 0L7.5 12m4.5 4.5V3" />
+                  </svg>
+                  <span>Télécharger mon rapport</span>
                 </button>
               </motion.div>
             </motion.div>
@@ -92,7 +92,7 @@ export default function Home() {
               initial={{ opacity: 0, scale: 0.9 }}
               animate={{ opacity: 1, scale: 1 }}
               transition={{ duration: 0.5, delay: 0.2 }}
-              className="hidden lg:block relative h-96"
+              className="hidden md:block relative h-72 lg:h-96"
             >
               <div className="absolute inset-0 bg-linear-to-br to-teal-400 from-teal-50 rounded-3xl opacity-10 blur-3xl" />
               <div className="relative h-full flex items-center justify-center cardhover">
@@ -132,7 +132,7 @@ export default function Home() {
             initial="hidden"
             whileInView="visible"
             variants={containerVariants}
-            className="grid grid-cols-1 md:grid-cols-4 gap-6"
+            className="grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-4 gap-6"
           >
             <motion.div variants={cardVariants} className="shadow-md border rounded-sm p-6 border-t-4 border-blue-500 cardhover">
               <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="size-6 mb-4">
@@ -174,42 +174,43 @@ export default function Home() {
         </div>
       </section>
       {/* A propos de moi */}
-      <section className="p-15 bg-white flex items-center justify-center flex-col cardhover">
-        <motion.div className="pb-10 card-apropos px-20 flex items-center h-32 " variants={cardVariants} initial="hidden" whileInView="visible">
-          <div className="max-w-6xl mx-auto">
+      <section className="bg-white flex items-center justify-center flex-col cardhover py-16 px-6 sm:px-8 lg:px-12 mt-10">
+        <motion.div className="w-full max-w-6xl px-0 py-12 sm:px-8 lg:px-12" variants={cardVariants} initial="hidden" whileInView="visible">
+          <div className="mx-auto">
             <motion.p
               initial="hidden"
               whileInView="visible"
               variants={textVariants}
-              className="text-2xl font-bold mb-4 text-center"
+              className="text-3xl sm:text-4xl font-bold mb-4 text-center"
             >A propos de moi</motion.p>
             <motion.div
               initial="hidden"
               whileInView="visible"
               variants={textVariants}
-              className="text-xl mb-5 text-center flex items-center justify-center flex-col text-gray-700"
+              className="text-base sm:text-lg leading-relaxed text-center text-gray-700 max-w-3xl mx-auto"
             >
-              Etudient en informatique passioné par le développment et les nouvelles technlogies. Ce stage m&apos;a permis de mettre en pratique mes connaissances et de reveler des défis concrets au sein d&apos;un environnement académique.
-              <Link href="https://lukau.vercel.app/" target="_blank" className="mt-4">
-                <button className="text-sm bg-teal-600 cursor-pointer hover:bg-teal-700 text-white px-8 py-3 rounded-lg font-semibold transition-colors flex items-center gap-2 mt-4">
+              Etudiant en informatique passioné par le développment et les nouvelles technologies. Ce stage m&apos;a permis de mettre en pratique mes connaissances et de relever des défis concrets au sein d&apos;un environnement académique.
+            </motion.div>
+            <div className="mt-8 flex flex-col items-center gap-4 sm:flex-row sm:justify-center">
+              <Link href="https://lukau.vercel.app/" target="_blank">
+                <button className="w-full sm:w-auto text-sm bg-blue-600 cursor-pointer hover:bg-blue-700 text-white px-8 py-3 rounded-lg font-semibold transition-colors flex items-center justify-center gap-2">
                   En savoir plus sur moi
                   <span>→</span>
                 </button>
               </Link>
-
-            </motion.div>
+            </div>
           </div>
         </motion.div>
       </section>
       {/* Parcours Section */}
       <section className=" w-full bg-white py-20">
-          <motion.div
-            initial="hidden"
-            whileInView="visible"
-            variants={containerVariants}
-          >
-        <div className="max-w-6xl mx-auto px-8 lg:px-12">
-        
+        <motion.div
+          initial="hidden"
+          whileInView="visible"
+          variants={containerVariants}
+        >
+          <div className="max-w-6xl mx-auto px-8 lg:px-12">
+
             <motion.div variants={cardVariants} className="mb-16 text-center">
               <h2 className="text-4xl font-bold text-gray-900 mb-4">
                 Mon Parcours à l&apos;IUT
@@ -219,7 +220,7 @@ export default function Home() {
               </p>
             </motion.div>
             <motion.div
-              className="grid grid-cols-1 md:grid-cols-4 gap-6"
+              className="grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-4 gap-6"
               variants={containerVariants}
             >
               {[
@@ -252,8 +253,8 @@ export default function Home() {
                 </motion.div>
               ))}
             </motion.div>
-        </div>
-          </motion.div>
+          </div>
+        </motion.div>
       </section>
 
       <section className="w-full  py-20 bg-gray-300  bg-imageiut">
@@ -265,27 +266,27 @@ export default function Home() {
           >
             <motion.div variants={cardVariants} className="mb-16 text-center">
               <h2 className="text-4xl font-bold text-gray-900 mb-4">
-               Qu'est-ce que j&apos;ai fait pendant mon stage ?
+                Qu'est-ce que j&apos;ai fait pendant mon stage ?
               </h2>
               <p className="text-gray-600 text-lg max-w-2xl mx-auto">
-                Découvrez les projets et les missions que j&apos;ai réalisés pendant mon stage à l&apos;IUT de Blois
+                Découvrez les activités et les missions que j&apos;ai réalisés pendant mon stage à l&apos;IUT de Blois
               </p>
             </motion.div>
             <motion.div
-              className="grid grid-cols-1 md:grid-cols-3 gap-6"
+              className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6"
               variants={containerVariants}
             >
               {[
-                { title: "Mission 1", desc: "Participation aux cours" },
-                { title: "Mission 2", desc: "Améliorer mon portefeuille" },
-                { title: "Mission 3", desc: "Développement d'un site web présentant le stage à l'IUT" },
-                { title: "Mission 4", desc: "Observation des projets" },
+                { title: "Activités 1", desc: "Participation aux cours" },
+                { title: "Activités 2", desc: "Améliorer mon portefeuille" },
+                { title: "Activités 3", desc: "Développement d'un site web présentant le stage à l'IUT" },
+                { title: "Activités 4", desc: "Observation des projets" },
               ].map((item, index) => (
                 <motion.div
                   key={index}
                   variants={cardVariants}
                   className="bg-linear-to-br from-teal-50 to-blue-50 p-8 transition-all duration-800 text-center px-2 py-4 rounded-md cardhover">
-                
+
                   <h3 className="text-xl font-bold text-gray-900 mb-2">
                     {item.title}
                   </h3>
