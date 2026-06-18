@@ -241,7 +241,7 @@ export default function Home() {
                       </div>
                     ) : null}
                   </div>
-                  <button  className="bg-teal-600 text-white font-medium text-md rounded-md active:bg-teal-700 hover:bg-teal-500 py-2" >Fermer</button>
+                  <button  className="bg-teal-600 text-white font-medium text-md rounded-md active:bg-teal-700 hover:bg-teal-500 py-2" onClick={} >Fermer</button>
                 </DialogContent>
               </Dialog>
             ))}
