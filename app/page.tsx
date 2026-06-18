@@ -288,10 +288,10 @@ export default function Home() {
                   variants={cardVariants}
                   className="bg-linear-to-br from-teal-50 to-blue-50 p-8 transition-all duration-800 text-center px-2 py-4 rounded-md cardhover">
 
-                  <h3 className="text-xl font-bold text-gray-900 mb-2">
+                  <h3 className="text-2xl font-bold text-gray-900 mb-2">
                     {item.title}
                   </h3>
-                  <p className="text-gray-600 text-sm">
+                  <p className="opacity-60 text-md">
                     {item.desc}
                   </p>
                 </motion.div>
