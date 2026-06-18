@@ -16,6 +16,7 @@ import {
 export default function Home() {
   const infoCards = [
     {
+      img: "/assets/iutblois.jpg",
       title: "Entreprise d'accueil",
       subtitle: "IUT de Blois",
       accent: "border-blue-500",
@@ -33,8 +34,9 @@ export default function Home() {
       ],
     },
     {
+
       title: "Période de stage",
-      subtitle: "06 à 27 juin",
+      subtitle: "08 à 27 juin",
       accent: "border-green-500",
       icon: (
         <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="size-6 mb-4">
@@ -168,10 +170,10 @@ export default function Home() {
               <div className="absolute inset-0 bg-linear-to-br to-teal-400 from-teal-50 rounded-3xl opacity-10 blur-3xl" />
               <div className="relative h-full flex items-center justify-center cardhover">
                 <Image
-                  src="/assets/illustration.png"
+                  src="/assets/iutblois2.png"
                   alt="INFOIUT Reference"
-                  width={600}
-                  height={400}
+                  width={800}
+                  height={600} 
                   className="object-contain h-full"
                 />
               </div>
@@ -209,8 +211,7 @@ export default function Home() {
                 <DialogTrigger asChild>
                   <motion.button
                     variants={cardVariants}
-                    className={`w-full text-left shadow-md border rounded-sm p-6 border-t-4 ${card.accent} cardhover cursor-pointer`}
-                  >
+                    className={`w-full text-left shadow-md border rounded-sm p-6 border-t-4 ${card.accent} cardhover cursor-pointer`}>
                     {card.icon}
                     <h3 className="text-gray-700 font-semibold">{card.title}</h3>
                     <p className="text-sm text-gray-600">{card.subtitle}</p>
@@ -227,6 +228,17 @@ export default function Home() {
                         {detail}
                       </p>
                     ))}
+                    {card.img ? (
+                      <div className="mt-4 overflow-hidden rounded-lg">
+                        <Image
+                          src={card.img}
+                          alt={card.title}
+                          width={800}
+                          height={500}
+                          className="w-full h-auto object-cover"
+                        />
+                      </div>
+                    ) : null}
                   </div>
                 </DialogContent>
               </Dialog>
@@ -271,7 +283,6 @@ export default function Home() {
           variants={containerVariants}
         >
           <div className="max-w-6xl mx-auto px-8 lg:px-12">
-
             <motion.div variants={cardVariants} className="mb-16 text-center">
               <h2 className="text-4xl font-bold text-gray-900 mb-4">
                 Mon Parcours à l&apos;IUT
