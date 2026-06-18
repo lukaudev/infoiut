@@ -170,7 +170,7 @@ export default function Home() {
               <div className="absolute inset-0 bg-linear-to-br to-teal-400 from-teal-50 rounded-3xl opacity-10 blur-3xl" />
               <div className="relative h-full flex items-center justify-center cardhover">
                 <Image
-                  src="/assets/iutblois2.png"
+                  src="/assets/iutdeblois-design.png"
                   alt="INFOIUT Reference"
                   width={800}
                   height={600} 
