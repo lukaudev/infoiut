@@ -135,13 +135,13 @@ export default function Home() {
                 variants={cardVariants}
                 className="text-2xl md:text-5xl font-extrabold text-gray-900 mb-6"
               >
-                Stage à l&apos;IUT
+                Stage à l'IUT
               </motion.h1>
               <motion.p
                 variants={cardVariants}
                 className="text-lg text-gray-600 mb-8 leading-relaxed"
               >
-                Découvrez mon expérience de stage à l&apos;INFOIUT et comment elle m&apos;a permis de développer mes compétences professionnelles.
+                Découvrez mon expérience de stage à l'INFOIUT et comment elle m'a permis de développer mes compétences professionnelles.
               </motion.p>
               <motion.div
                 variants={cardVariants}
@@ -174,6 +174,7 @@ export default function Home() {
                   alt="INFOIUT Reference"
                   width={800}
                   height={600} 
+                  loading="eager"
                   className="object-contain h-full"
                 />
               </div>
@@ -240,6 +241,7 @@ export default function Home() {
                       </div>
                     ) : null}
                   </div>
+                  <button  className="bg-teal-600 text-white font-medium text-md rounded-md active:bg-teal-700 hover:bg-teal-500 py-2" >Fermer</button>
                 </DialogContent>
               </Dialog>
             ))}
@@ -262,7 +264,7 @@ export default function Home() {
               variants={textVariants}
               className="text-base sm:text-lg leading-relaxed text-center text-gray-700 max-w-3xl mx-auto"
             >
-              Etudiant en informatique passioné par le développment et les nouvelles technologies. Ce stage m&apos;a permis de mettre en pratique mes connaissances et de relever des défis concrets au sein d&apos;un environnement académique.
+              Etudiant en informatique passioné par le développment et les nouvelles technologies. Ce stage m'a permis de mettre en pratique mes connaissances et de relever des défis concrets au sein d'un environnement académique.
             </motion.div>
             <div className="mt-8 flex flex-col items-center gap-4 sm:flex-row sm:justify-center">
               <Link href="https://lukau.vercel.app/" target="_blank">
@@ -285,10 +287,10 @@ export default function Home() {
           <div className="max-w-6xl mx-auto px-8 lg:px-12">
             <motion.div variants={cardVariants} className="mb-16 text-center">
               <h2 className="text-4xl font-bold text-gray-900 mb-4">
-                Mon Parcours à l&apos;IUT
+                Mon Parcours à l'IUT
               </h2>
               <p className="text-gray-600 text-lg max-w-2xl mx-auto">
-                Découvrez les étapes clés de mon expérience à l&apos;IUT de Blois
+                Découvrez les étapes clés de mon expérience à l'IUT de Blois
               </p>
             </motion.div>
             <motion.div
@@ -337,10 +339,10 @@ export default function Home() {
           >
             <motion.div variants={cardVariants} className="mb-16 text-center">
               <h2 className="text-4xl font-bold text-gray-900 mb-4">
-                Qu&apos;est-ce que j&apos;ai fait pendant mon stage ?
+                Qu'est-ce que j'ai fait pendant mon stage ?
               </h2>
               <p className="text-gray-600 text-lg max-w-2xl mx-auto">
-                Découvrez les activités et les missions que j&apos;ai réalisés pendant mon stage à l&apos;IUT de Blois
+                Découvrez les activités et les missions que j'ai réalisés pendant mon stage à l'IUT de Blois
               </p>
             </motion.div>
             <motion.div
@@ -350,7 +352,7 @@ export default function Home() {
               {[
                 { title: "Activité 1", desc: "Participation aux cours" },
                 { title: "Activité 2", desc: "Améliorer mon portefeuille" },
-                { title: "Activité 3", desc: "Développement d&apos;un site web présentant le stage à l&apos;IUT" },
+                { title: "Activité 3", desc: "Développement d'un site web présentant le stage à l'IUT" },
                 { title: "Activité 4", desc: "Observation des projets" },
                 { title: "Activité 5", desc: "Recherches sur MMI, LIFAT et R&T" }
               ].map((item, index) => (
