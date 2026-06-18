@@ -6,6 +6,7 @@ import Footer from "./components/footer";
 import Image from "next/image";
 import {
   Dialog,
+  DialogClose,
   DialogContent,
   DialogDescription,
   DialogHeader,
@@ -241,7 +242,11 @@ export default function Home() {
                       </div>
                     ) : null}
                   </div>
-                  <button  className="bg-teal-600 text-white font-medium text-md rounded-md active:bg-teal-700 hover:bg-teal-500 py-2" >Fermer</button>
+                  <DialogClose asChild>
+                    <button className="bg-teal-600 text-white font-medium text-md rounded-md active:bg-teal-700 hover:bg-teal-500 py-2">
+                      Fermer
+                    </button>
+                  </DialogClose>
                 </DialogContent>
               </Dialog>
             ))}
@@ -322,7 +327,7 @@ export default function Home() {
                     </p>
                   </div>
                   {item.number < 4 && (
-                    <div className="hidden md:block absolute top-1/2 -right-6 w-12 h-0.5 bg-gradient-to-r from-teal-500 to-transparent" />
+                    <div className="hidden md:block absolute top-1/2 -right-6 w-12 h-0.5 bg-linear-to-r from-teal-500 to-transparent" />
                   )}
                 </motion.div>
               ))}
@@ -351,10 +356,11 @@ export default function Home() {
             >
               {[
                 { title: "Activité 1", desc: "Participation aux cours" },
-                { title: "Activité 2", desc: "Améliorer mon portefeuille" },
+                { title: "Activité 2", desc: "Améliorer mon portfolio" },
                 { title: "Activité 3", desc: "Développement d'un site web présentant le stage à l'IUT" },
                 { title: "Activité 4", desc: "Observation des projets" },
-                { title: "Activité 5", desc: "Recherches sur MMI, LIFAT et R&T" }
+                { title: "Activité 5", desc: "Recherches sur MMI, LIFAT et R&T" },
+                { title: "Activité 6", desc: "Conception des projects des éléves de MMI" }
               ].map((item, index) => (
                 <motion.div
                   key={index}

@@ -14,11 +14,16 @@ import  { usePathname } from "next/navigation";
 
 export default function Header() {
 
-  const [page, setPage] = useState("");
-  const pageRouter = usePathname();
+  const pathname = usePathname();
   const [isOpen, setIsOpen] = useState(false);
   const [isResearchesOpen, setIsResearchesOpen] = useState(false);
   const closeMenu = () => setIsOpen(false);
+
+  const isActive = (href: string) => {
+    if (href === "/" && pathname === "/") return true;
+    if (href !== "/" && pathname.startsWith(href)) return true;
+    return false;
+  };
 
   return (
     <header className="bg-white border-b border-gray-300 fixed top-0 left-0 right-0 z-50 h-20">
@@ -37,39 +42,39 @@ export default function Header() {
         {/* Desktop Navigation */}
         <nav className="hidden md:flex items-center justify-end gap-1 button-group h-full">
           <Link href="/" className="h-full flex items-center">
-            <button className="h-full  rounded cursor-pointer transition-colors duration-300 text-gray-700 hover:text-[#0a9ca7] px-4 flex items-center">
+            <button className={`h-full rounded cursor-pointer transition-colors duration-300 px-4 flex items-center ${isActive("/") ? "text-[#0a9ca7] font-semibold border-b-2 border-[#0a9ca7]" : "text-gray-700 hover:text-[#0a9ca7]"}`}>
               Accueil
             </button>
           </Link>
           <Link href="/lequipe" className="h-full flex items-center">
-            <button className="h-full  rounded cursor-pointer transition-colors duration-300 text-gray-700 hover:text-[#0a9ca7] px-4 flex items-center">
+            <button className={`h-full rounded cursor-pointer transition-colors duration-300 px-4 flex items-center ${isActive("/lequipe") ? "text-[#0a9ca7] font-semibold border-b-2 border-[#0a9ca7]" : "text-gray-700 hover:text-[#0a9ca7]"}`}>
               L&apos;equipe
             </button>
           </Link>
           <Link href="/galerie" className="h-full flex items-center">
-            <button className="h-full  rounded cursor-pointer transition-colors duration-300 text-gray-700 hover:text-[#0a9ca7] px-4 flex items-center">
+            <button className={`h-full rounded cursor-pointer transition-colors duration-300 px-4 flex items-center ${isActive("/galerie") ? "text-[#0a9ca7] font-semibold border-b-2 border-[#0a9ca7]" : "text-gray-700 hover:text-[#0a9ca7]"}`}>
               Galerie
             </button>
           </Link>
           <DropdownMenu>
             <DropdownMenuTrigger asChild>
-              <button className={`h-full hover:bg-[#e1ebeb] active:bg-[#e1ebeb] cursor-pointer transition-colors duration-300 text-gray-700 hover:text-[#0a9ca7] px-4 flex items-center outline-0`}>
+              <button className={`h-full hover:bg-[#e1ebeb] active:bg-[#e1ebeb] cursor-pointer transition-colors duration-300 px-4 flex items-center outline-0  ${["/lifat", "/mmi", "/rt"].some(h => isActive(h)) ? "text-[#0a9ca7] font-semibold" : "text-gray-700 hover:text-[#0a9ca7]"}`}>
                 Recherches <span className="ml-1">▾</span>
               </button>
             </DropdownMenuTrigger>
             <DropdownMenuContent className="w-40" align="end">
               <Link href="/lifat" onClick={closeMenu}>
-                <DropdownMenuItem className="hover:bg-[#00A8A8] rounded cursor-pointer transition-colors duration-300 text-gray-700 hover:text-[#0a9ca7] px-4 py-2">
+                <DropdownMenuItem className={`rounded cursor-pointer transition-colors duration-300 px-4 py-2 ${isActive("/lifat") ? "text-[#0a9ca7] font-semibold bg-[#e1ebeb]  border-b-2 border-[#0a9ca7]" : "text-gray-700 hover:text-[#0a9ca7] hover:bg-[#e1ebeb]"}`}>
                   LIFAT
                 </DropdownMenuItem>
               </Link>
               <Link href="/mmi" onClick={closeMenu}>
-                <DropdownMenuItem className="hover:bg-[#00A8A8] rounded cursor-pointer transition-colors duration-300 text-gray-700 hover:text-[#0a9ca7] px-4 py-2">
+                <DropdownMenuItem className={`rounded cursor-pointer transition-colors duration-300 px-4 py-2 ${isActive("/mmi") ? "text-[#0a9ca7] font-semibold bg-[#e1ebeb]  border-b-2 border-[#0a9ca7]" : "text-gray-700 hover:text-[#0a9ca7] hover:bg-[#e1ebeb]"}`}>
                   MMI
                 </DropdownMenuItem>
               </Link>
               <Link href="/rt" onClick={closeMenu}>
-                <DropdownMenuItem className="hover:bg-[#00A8A8] rounded cursor-pointer transition-colors duration-300 text-gray-700 hover:text-[#0a9ca7] px-4 py-2">
+                <DropdownMenuItem className={`rounded cursor-pointer transition-colors duration-300 px-4 py-2 ${isActive("/rt") ? "text-[#0a9ca7] font-semibold bg-[#e1ebeb]  border-b-2 border-[#0a9ca7]" : "text-gray-700 hover:text-[#0a9ca7] hover:bg-[#e1ebeb]"}`}>
                   R&T
                 </DropdownMenuItem>
               </Link>
@@ -112,24 +117,29 @@ export default function Header() {
         }`}
       >
         <nav className="flex flex-col py-4">
+          <Link href="/" onClick={closeMenu}>
+            <button className={`w-full text-left transition-colors duration-300 px-6 py-3 ${isActive("/") ? "text-[#0a9ca7] font-semibold bg-[#e1ebeb]" : "text-gray-700 hover:text-[#0a9ca7]"}`}>
+              Accueil
+            </button>
+          </Link>
           <Link href="/lequipe" onClick={closeMenu}>
-            <button className="w-full text-left  transition-colors duration-300 text-gray-700 hover:text-[#0a9ca7] px-6 py-3">
+            <button className={`w-full text-left transition-colors duration-300 px-6 py-3 ${isActive("/lequipe") ? "text-[#0a9ca7] font-semibold bg-[#e1ebeb]" : "text-gray-700 hover:text-[#0a9ca7]"}`}>
               L&apos;equipe
             </button>
           </Link>
           <Link href="/projects" onClick={closeMenu}>
-            <button className="w-full text-left  transition-colors duration-300 text-gray-700 hover:text-[#0a9ca7] px-6 py-3">
+            <button className={`w-full text-left transition-colors duration-300 px-6 py-3 ${isActive("/projects") ? "text-[#0a9ca7] font-semibold bg-[#e1ebeb]" : "text-gray-700 hover:text-[#0a9ca7]"}`}>
               Projects
             </button>
           </Link>
           <Link href="/galerie" onClick={closeMenu}>
-            <button className="w-full text-left  transition-colors duration-300 text-gray-700 hover:text-[#0a9ca7] px-6 py-3">
+            <button className={`w-full text-left transition-colors duration-300 px-6 py-3 ${isActive("/galerie") ? "text-[#0a9ca7] font-semibold bg-[#e1ebeb]" : "text-gray-700 hover:text-[#0a9ca7]"}`}>
               Galerie
             </button>
           </Link>
           <button
             onClick={() => setIsResearchesOpen(!isResearchesOpen)}
-            className="w-full text-left hover:bg-gray-100 transition-colors duration-300 text-gray-700 px-6 py-3 flex items-center justify-between"
+            className={`w-full text-left hover:bg-gray-100 transition-colors duration-300 px-6 py-3 flex items-center justify-between ${["/lifat", "/mmi", "/rt"].some(h => isActive(h)) ? "text-[#0a9ca7] font-semibold" : "text-gray-700"}`}
           >
             Recherches
             <span className={`transition-transform ${isResearchesOpen ? "rotate-180" : ""}`}>▾</span>
@@ -137,17 +147,17 @@ export default function Header() {
           {isResearchesOpen && (
             <div className="bg-gray-100">
               <Link href="/lifat" onClick={closeMenu}>
-                <button className="w-full text-left transition-colors duration-300 text-gray-700 hover:text-[#0a9ca7] px-8 py-2">
+                <button className={`w-full text-left transition-colors duration-300 px-8 py-2 ${isActive("/lifat") ? "text-[#0a9ca7] font-semibold bg-[#d4e5e5]" : "text-gray-700 hover:text-[#0a9ca7]"}`}>
                   LIFAT
                 </button>
               </Link>
               <Link href="/mmi" onClick={closeMenu}>
-                <button className="w-full text-left transition-colors duration-300 text-gray-700 hover:text-[#0a9ca7] px-8 py-2">
+                <button className={`w-full text-left transition-colors duration-300 px-8 py-2 ${isActive("/mmi") ? "text-[#0a9ca7] font-semibold bg-[#d4e5e5]" : "text-gray-700 hover:text-[#0a9ca7]"}`}>
                   MMI
                 </button>
               </Link>
               <Link href="/rt" onClick={closeMenu}>
-                <button className="w-full text-left  transition-colors duration-300 text-gray-700 hover:text-[#0a9ca7] px-8 py-2">
+                <button className={`w-full text-left transition-colors duration-300 px-8 py-2 ${isActive("/rt") ? "text-[#0a9ca7] font-semibold bg-[#d4e5e5]" : "text-gray-700 hover:text-[#0a9ca7]"}`}>
                   R&T
                 </button>
               </Link>
