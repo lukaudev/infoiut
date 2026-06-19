@@ -287,8 +287,7 @@ export default function Home() {
         <motion.div
           initial="hidden"
           whileInView="visible"
-          variants={containerVariants}
-        >
+          variants={containerVariants} >
           <div className="max-w-6xl mx-auto px-8 lg:px-12">
             <motion.div variants={cardVariants} className="mb-16 text-center">
               <h2 className="text-4xl font-bold text-gray-900 mb-4">
