@@ -174,7 +174,7 @@ export default function Home() {
                   src="/assets/iutdeblois-design.png"
                   alt="INFOIUT Reference"
                   width={800}
-                  height={600} 
+                  height={600}
                   loading="eager"
                   className="object-contain h-full"
                 />
