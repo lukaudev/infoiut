@@ -22,7 +22,7 @@ const nextConfig: NextConfig = {
               test: /node_modules/,
               priority: 10,
               reuseExistingChunk: true,
-              name(module) {
+              name(module: any) {
                 const packageName = module.context.match(
                   /[\\/]node_modules[\\/](.*?)([\\/]|$)/
                 )[1];
