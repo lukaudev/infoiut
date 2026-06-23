@@ -31,7 +31,6 @@ export default function Home() {
       dialogDetails: [
         "Lieu : IUT de Blois",
         "Type d'environnement : universitaire et professionnel",
-        "Ambiance : échanges avec les enseignants et les équipes techniques",
       ],
     },
     {
@@ -47,14 +46,13 @@ export default function Home() {
       dialogTitle: "Période du stage",
       dialogText: "Le stage s'est organisé sur une période de trois semaines, permettant une immersion progressive dans les activités du lieu d'accueil.",
       dialogDetails: [
-        "Dates : du 06 au 27 juin",
+        "Dates : du 08 au 27 juin",
         "Cadence : suivi régulier sur la durée du stage",
-        "Objectif : comprendre le fonctionnement du milieu académique",
       ],
     },
     {
       title: "Mon rôle",
-      subtitle: "Observation et Development Web",
+      subtitle: "Decouvert et Development Web",
       accent: "border-purple-500",
       icon: (
         <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="size-6 mb-4">
@@ -336,6 +334,7 @@ export default function Home() {
       </section>
       <section className="w-full  py-20 bg-gray-300  bg-imageiut">
         <div className="max-w-6xl mx-auto px-8 lg:px-12">
+          
           <motion.div
             initial="hidden"
             whileInView="visible"
@@ -354,12 +353,15 @@ export default function Home() {
               variants={containerVariants}
             >
               {[
-                { title: "Activité 1", desc: "Participation aux cours" },
+                { title: "Aprentissage", desc: "Participation aux cours" },
                 { title: "Activité 2", desc: "Améliorer mon portfolio" },
-                { title: "Activité 3", desc: "Développement d'un site web présentant le stage à l'IUT" },
+                { title: "Development Web", desc: "Développement d'un site web présentant le stage à l'IUT" },
                 { title: "Activité 4", desc: "Observation des projets" },
-                { title: "Activité 5", desc: "Recherches sur MMI, LIFAT et R&T" },
-                { title: "Activité 6", desc: "Conception des projects des éléves de MMI" }
+                { title: "Recherches", desc: "Recherches sur MMI, LIFAT et R&T" },
+                { title: "Evaluation", desc: "Conception des projects des éléves de MMI" },
+                { title: "Restituition Master", desc: "Exploration de portails sémantiques par programmation, utilisation des API pour la demande des données." },
+                { title: "Restituition Master", desc: "Extraction-chargement-transformation" }
+
               ].map((item, index) => (
                 <motion.div
                   key={index}
