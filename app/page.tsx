@@ -151,12 +151,14 @@ export default function Home() {
                     Découvrez mon parcours  <span>→</span>
                   </button>
                 </Link>
+                <Link href={"/assets/Rapport.pdf"} target="_blank">
                 <button className="w-full sm:w-auto text-md border-2 cursor-pointer border-gray-300 text-gray-700 hover:border-gray-400 px-6 py-3 rounded-lg font-semibold transition-colors flex items-center justify-center gap-2">
                   <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="h-5 w-5 sm:h-6 sm:w-6">
                     <path strokeLinecap="round" strokeLinejoin="round" d="M3 16.5v2.25A2.25 2.25 0 0 0 5.25 21h13.5A2.25 2.25 0 0 0 21 18.75V16.5M16.5 12 12 16.5m0 0L7.5 12m4.5 4.5V3" />
                   </svg>
                   <span>Télécharger mon rapport</span>
                 </button>
+                </Link>
               </motion.div>
             </motion.div>
             {/* Right side with abstract design */}
@@ -354,9 +356,9 @@ export default function Home() {
             >
               {[
                 { title: "Aprentissage", desc: "Participation aux cours" },
-                { title: "Activité 2", desc: "Améliorer mon portfolio" },
+                { title: "Amélioration", desc: "Améliorer mon portfolio" },
                 { title: "Development Web", desc: "Développement d'un site web présentant le stage à l'IUT" },
-                { title: "Activité 4", desc: "Observation des projets" },
+                { title: "Decouvert", desc: "Observation des projets" },
                 { title: "Recherches", desc: "Recherches sur MMI, LIFAT et R&T" },
                 { title: "Evaluation", desc: "Conception des projects des éléves de MMI" },
                 { title: "Restituition Master", desc: "Exploration de portails sémantiques par programmation, utilisation des API pour la demande des données." },
