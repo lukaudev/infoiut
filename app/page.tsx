@@ -34,9 +34,8 @@ export default function Home() {
       ],
     },
     {
-
       title: "Période de stage",
-      subtitle: "08 à 27 juin",
+      subtitle: "08 au 27 juin",
       accent: "border-green-500",
       icon: (
         <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="size-6 mb-4">
@@ -52,7 +51,7 @@ export default function Home() {
     },
     {
       title: "Mon rôle",
-      subtitle: "Decouvert et Development Web",
+      subtitle: "Découverte et Développement Web",
       accent: "border-purple-500",
       icon: (
         <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="size-6 mb-4">
@@ -82,6 +81,101 @@ export default function Home() {
         "Objectif professionnel : construire un projet de carrière",
         "Objectif personnel : renforcer sa confiance et son autonomie",
         "Apprentissage : découvrir les attentes du milieu professionnel",
+      ],
+    },
+  ];
+
+  const activiteCards = [
+    {
+      title: "Apprentissage",
+      desc: "Participation aux cours",
+      dialogTitle: "Apprentissage en cours",
+      dialogText: "J'ai participé à plusieurs cours dispensés à l'IUT, ce qui m'a permis de découvrir les méthodes pédagogiques utilisées et d'approfondir mes connaissances techniques.",
+      dialogDetails: [
+        "Participation active aux séances de cours",
+        "Prise de notes et suivi des enseignements",
+        "Échanges avec les enseignants et les étudiants",
+      ],
+    },
+    {
+      title: "Amélioration",
+      desc: "Améliorer mon portfolio",
+      dialogTitle: "Amélioration du portfolio",
+      dialogText: "Durant le stage, j'ai travaillé sur l'amélioration de mon portfolio personnel afin de mieux présenter mes compétences et mes réalisations.",
+      dialogDetails: [
+        "Refonte visuelle et ergonomique du site",
+        "Ajout de nouveaux projets et descriptions",
+        "Optimisation des performances et du référencement",
+      ],
+    },
+    {
+      title: "Développement Web",
+      desc: "Développement d'un site web présentant le stage à l'IUT",
+      dialogTitle: "Développement du site de stage",
+      dialogText: "J'ai conçu et développé ce site web qui présente mon expérience de stage à l'IUT de Blois, en utilisant des technologies modernes comme Next.js et Tailwind CSS.",
+      dialogDetails: [
+        "Technologies utilisées : Next.js, Tailwind CSS, Framer Motion",
+        "Conception de l'interface et de l'expérience utilisateur",
+        "Intégration des animations et des composants interactifs",
+        "Déploiement et mise en ligne du projet",
+      ],
+    },
+    {
+      title: "Découverte",
+      desc: "Observation des projets",
+      dialogTitle: "Découverte des projets de l'IUT",
+      dialogText: "J'ai pu observer et analyser différents projets réalisés par les étudiants et les équipes pédagogiques, ce qui m'a donné un aperçu concret du travail effectué à l'IUT.",
+      dialogDetails: [
+        "Observation de projets étudiants en MMI et Informatique",
+        "Analyse des méthodologies de travail employées",
+        "Discussions avec les porteurs de projets",
+      ],
+    },
+    {
+      title: "Recherches",
+      desc: "Recherches sur MMI, LIFAT et R&T",
+      dialogTitle: "Recherches sur les départements",
+      dialogText: "J'ai effectué des recherches approfondies sur les trois départements principaux de l'IUT : MMI (Métiers du Multimédia et de l'Internet), LIFAT (Laboratoire d'Informatique Fondamentale et Appliquée de Tours) et R&T (Réseaux et Télécommunications).",
+      dialogDetails: [
+        "MMI : découverte des formations en multimédia et design web",
+        "LIFAT : compréhension des axes de recherche en informatique",
+        "R&T : exploration des formations en réseaux et télécommunications",
+        "Synthèse des informations collectées pour le rapport de stage",
+      ],
+    },
+    {
+      title: "Évaluation",
+      desc: "Conception des projets des élèves de MMI",
+      dialogTitle: "Évaluation des projets MMI",
+      dialogText: "J'ai assisté et participé à l'évaluation des projets réalisés par les étudiants du département MMI, ce qui m'a permis de comprendre les critères d'excellence attendus dans ce domaine.",
+      dialogDetails: [
+        "Observation des soutenances de projets étudiants",
+        "Prise en compte des critères créatifs et techniques",
+        "Échanges avec les enseignants sur les méthodes d'évaluation",
+      ],
+    },
+    {
+      title: "Restitution Master",
+      desc: "Exploration de portails sémantiques par programmation, utilisation des API pour la demande des données.",
+      dialogTitle: "Restitution Master – Portails sémantiques",
+      dialogText: "J'ai suivi une restitution de travaux de Master portant sur l'exploration de portails sémantiques via la programmation et l'utilisation d'API pour l'extraction de données structurées.",
+      dialogDetails: [
+        "Exploration de portails de données ouvertes (open data)",
+        "Requêtes via des API REST et SPARQL",
+        "Traitement et visualisation des données récupérées",
+        "Présentation des résultats sous forme de rapports",
+      ],
+    },
+    {
+      title: "Restitution Master",
+      desc: "Extraction-Chargement-Transformation",
+      dialogTitle: "Restitution Master – ETL",
+      dialogText: "Cette restitution portait sur le processus ETL (Extraction, Transformation, Chargement), une technique fondamentale en ingénierie des données permettant de collecter, nettoyer et intégrer des données provenant de sources hétérogènes.",
+      dialogDetails: [
+        "Extraction : collecte de données depuis diverses sources",
+        "Transformation : nettoyage, normalisation et enrichissement des données",
+        "Chargement : intégration dans une base de données cible",
+        "Cas d'usage présentés : analyse de données académiques",
       ],
     },
   ];
@@ -127,20 +221,20 @@ export default function Home() {
             >
               <motion.div variants={cardVariants} className="mb-4">
                 <span className="inline-block bg-teal-100 text-teal-700 px-4 py-2 rounded-full text-sm font-semibold">
-                  Experience de stage
+                  Expérience de stage
                 </span>
               </motion.div>
               <motion.h1
                 variants={cardVariants}
                 className="text-2xl md:text-5xl font-extrabold text-gray-900 mb-6"
               >
-                Stage à l'IUT
+                Stage à l&apos;IUT
               </motion.h1>
               <motion.p
                 variants={cardVariants}
                 className="text-lg text-gray-600 mb-8 leading-relaxed"
               >
-                Découvrez mon expérience de stage à l'INFOIUT et comment elle m'a permis de développer mes compétences professionnelles.
+                Découvrez mon expérience de stage à l&apos;INFOIUT et comment elle m&apos;a permis de développer mes compétences professionnelles.
               </motion.p>
               <motion.div
                 variants={cardVariants}
@@ -152,12 +246,12 @@ export default function Home() {
                   </button>
                 </Link>
                 <Link href={"/assets/Rapport.pdf"} target="_blank">
-                <button className="w-full sm:w-auto text-md border-2 cursor-pointer border-gray-300 text-gray-700 hover:border-gray-400 px-6 py-3 rounded-lg font-semibold transition-colors flex items-center justify-center gap-2">
-                  <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="h-5 w-5 sm:h-6 sm:w-6">
-                    <path strokeLinecap="round" strokeLinejoin="round" d="M3 16.5v2.25A2.25 2.25 0 0 0 5.25 21h13.5A2.25 2.25 0 0 0 21 18.75V16.5M16.5 12 12 16.5m0 0L7.5 12m4.5 4.5V3" />
-                  </svg>
-                  <span>Télécharger mon rapport</span>
-                </button>
+                  <button className="w-full sm:w-auto text-md border-2 cursor-pointer border-gray-300 text-gray-700 hover:border-gray-400 px-6 py-3 rounded-lg font-semibold transition-colors flex items-center justify-center gap-2">
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="h-5 w-5 sm:h-6 sm:w-6">
+                      <path strokeLinecap="round" strokeLinejoin="round" d="M3 16.5v2.25A2.25 2.25 0 0 0 5.25 21h13.5A2.25 2.25 0 0 0 21 18.75V16.5M16.5 12 12 16.5m0 0L7.5 12m4.5 4.5V3" />
+                    </svg>
+                    <span>Télécharger mon rapport</span>
+                  </button>
                 </Link>
               </motion.div>
             </motion.div>
@@ -183,7 +277,8 @@ export default function Home() {
           </div>
         </div>
       </section>
-      {/*Info Cards Section */}
+
+      {/* Info Cards Section */}
       <section className="w-full mt-10 shadow-2xs shadow-black/10 py-12 bg-white">
         <div className="max-w-7xl mx-auto px-8 lg:px-12">
           <motion.p
@@ -192,7 +287,7 @@ export default function Home() {
             variants={textVariants}
             className="text-lg font-bold mb-2"
           >
-            Details sur le stage
+            Détails sur le stage
           </motion.p>
           <motion.p
             initial="hidden"
@@ -253,7 +348,8 @@ export default function Home() {
           </motion.div>
         </div>
       </section>
-      {/* A propos de moi */}
+
+      {/* À propos de moi */}
       <section className="bg-white flex items-center justify-center flex-col cardhover py-16 px-6 sm:px-8 lg:px-12 mt-10">
         <motion.div className="w-full max-w-6xl px-0 py-12 sm:px-8 lg:px-12" variants={cardVariants} initial="hidden" whileInView="visible">
           <div className="mx-auto">
@@ -262,14 +358,14 @@ export default function Home() {
               whileInView="visible"
               variants={textVariants}
               className="text-3xl sm:text-4xl font-bold mb-4 text-center"
-            >A propos de moi</motion.p>
+            >À propos de moi</motion.p>
             <motion.div
               initial="hidden"
               whileInView="visible"
               variants={textVariants}
               className="text-base sm:text-lg leading-relaxed text-center text-gray-700 max-w-3xl mx-auto"
             >
-              Etudiant en informatique passioné par le développment et les nouvelles technologies. Ce stage m'a permis de mettre en pratique mes connaissances et de relever des défis concrets au sein d'un environnement académique.
+              Étudiant en informatique passionné par le développement et les nouvelles technologies. Ce stage m&apos;a permis de mettre en pratique mes connaissances et de relever des défis concrets au sein d&apos;un environnement académique.
             </motion.div>
             <div className="mt-8 flex flex-col items-center gap-4 sm:flex-row sm:justify-center">
               <Link href="https://lukau.vercel.app/" target="_blank">
@@ -282,19 +378,20 @@ export default function Home() {
           </div>
         </motion.div>
       </section>
+
       {/* Parcours Section */}
-      <section className=" w-full bg-white py-20" id="parcours">
+      <section className="w-full bg-white py-20" id="parcours">
         <motion.div
           initial="hidden"
           whileInView="visible"
-          variants={containerVariants} >
+          variants={containerVariants}>
           <div className="max-w-6xl mx-auto px-8 lg:px-12">
             <motion.div variants={cardVariants} className="mb-16 text-center">
               <h2 className="text-4xl font-bold text-gray-900 mb-4">
-                Mon Parcours à l'IUT
+                Mon Parcours à l&apos;IUT
               </h2>
               <p className="text-gray-600 text-lg max-w-2xl mx-auto">
-                Découvrez les étapes clés de mon expérience à l'IUT de Blois
+                Découvrez les étapes clés de mon expérience à l&apos;IUT de Blois
               </p>
             </motion.div>
             <motion.div
@@ -303,19 +400,19 @@ export default function Home() {
             >
               {[
                 { number: 1, title: "Admission", desc: "Inscription et bienvenue" },
-                { number: 2, title: "Integration", desc: "Decouvert de l'entreprise" },
-                { number: 3, title: "Presentantion", desc: "Presentantion de chaque endroit" },
-                { number: 4, title: "Mission", desc: "1ere mission" },
+                { number: 2, title: "Intégration", desc: "Découverte de l'entreprise" },
+                { number: 3, title: "Présentation", desc: "Présentation des lieux" },
+                { number: 4, title: "Mission", desc: "1ère mission" },
                 { number: 5, title: "Expérience", desc: "Stage en entreprise" },
-                { number: 6, title: "Avenir", desc: "Opportunités carrière" },
+                { number: 6, title: "Avenir", desc: "Opportunités de carrière" },
               ].map((item) => (
                 <motion.div
                   key={item.number}
                   variants={cardVariants}
                   className="relative"
                 >
-                  <div className=" p-8 transition-all duration-800 text-center px-2 py-4 rounded-md cardhover bg-gray-50 border border-gray-200">
-                    <div className="inline-flex items-center justify-center w-16 h-16 bg-linear-to-br from-teal-500 to-gray-500  text-white font-bold text-2xl mb-4 rounded-full">
+                  <div className="p-8 transition-all duration-800 text-center px-2 py-4 rounded-md cardhover bg-gray-50 border border-gray-200">
+                    <div className="inline-flex items-center justify-center w-16 h-16 bg-linear-to-br from-teal-500 to-gray-500 text-white font-bold text-2xl mb-4 rounded-full">
                       {item.number}
                     </div>
                     <h3 className="text-xl font-bold text-gray-900 mb-2">
@@ -334,9 +431,10 @@ export default function Home() {
           </div>
         </motion.div>
       </section>
-      <section className="w-full  py-20 bg-gray-300  bg-imageiut">
-        <div className="max-w-6xl mx-auto px-8 lg:px-12">
-          
+
+      {/* Activités Section — Timeline */}
+      <section className="w-full py-20 bg-gray-300 bg-imageiut">
+        <div className="max-w-5xl mx-auto px-8 lg:px-12">
           <motion.div
             initial="hidden"
             whileInView="visible"
@@ -344,44 +442,97 @@ export default function Home() {
           >
             <motion.div variants={cardVariants} className="mb-16 text-center">
               <h2 className="text-4xl font-bold text-gray-900 mb-4">
-                Qu'est-ce que j'ai fait pendant mon stage ?
+                Qu&apos;est-ce que j&apos;ai fait pendant mon stage ?
               </h2>
               <p className="text-gray-600 text-lg max-w-2xl mx-auto">
-                Découvrez les activités et les missions que j'ai réalisés pendant mon stage à l'IUT de Blois
+                Découvrez les activités et les missions que j&apos;ai réalisées pendant mon stage à l&apos;IUT de Blois
               </p>
             </motion.div>
-            <motion.div
-              className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6"
-              variants={containerVariants}
-            >
-              {[
-                { title: "Aprentissage", desc: "Participation aux cours" },
-                { title: "Amélioration", desc: "Améliorer mon portfolio" },
-                { title: "Development Web", desc: "Développement d'un site web présentant le stage à l'IUT" },
-                { title: "Decouvert", desc: "Observation des projets" },
-                { title: "Recherches", desc: "Recherches sur MMI, LIFAT et R&T" },
-                { title: "Evaluation", desc: "Conception des projects des éléves de MMI" },
-                { title: "Restituition Master", desc: "Exploration de portails sémantiques par programmation, utilisation des API pour la demande des données." },
-                { title: "Restituition Master", desc: "Extraction-chargement-transformation" }
 
-              ].map((item, index) => (
-                <motion.div
-                  key={index}
-                  variants={cardVariants}
-                  className="bg-linear-to-br from-teal-50 to-blue-50 p-8 transition-all duration-800 text-center px-2 py-4 rounded-md cardhover">
+            {/* Timeline container */}
+            <div className="relative">
+              {/* Vertical center line — hidden on mobile, visible md+ */}
+              <div className="hidden md:block absolute left-1/2 -translate-x-1/2 top-0 bottom-0 w-0.5 bg-teal-400/40" />
 
-                  <h3 className="text-2xl font-bold text-gray-900 mb-2">
-                    {item.title}
-                  </h3>
-                  <p className="opacity-60 text-md">
-                    {item.desc}
-                  </p>
-                </motion.div>
-              ))}
-            </motion.div>
+              <motion.div className="flex flex-col gap-12" variants={containerVariants}>
+                {activiteCards.map((item, index) => {
+                  const isLeft = index % 2 === 0;
+                  return (
+                    <Dialog key={index}>
+                      <motion.div
+                        variants={cardVariants}
+                        className={`relative flex flex-col md:flex-row items-center gap-6 ${isLeft ? "md:flex-row" : "md:flex-row-reverse"}`}
+                      >
+                        {/* Card */}
+                        <div className="w-full md:w-[calc(50%-2.5rem)]">
+                          <DialogTrigger asChild>
+                            <button className="w-full text-left bg-white/90 backdrop-blur-sm border border-teal-100 shadow-md rounded-xl p-6 cursor-pointer hover:shadow-lg hover:-translate-y-0.5 transition-all duration-200 group">
+                              {/* Step badge */}
+                              <span className="inline-block mb-3 text-xs font-semibold uppercase tracking-widest text-teal-600 bg-teal-50 px-2.5 py-1 rounded-full">
+                                Étape {index + 1}
+                              </span>
+                              <h3 className="text-xl font-bold text-gray-900 mb-1 group-hover:text-teal-700 transition-colors">
+                                {item.title}
+                              </h3>
+                              <p className="text-sm text-gray-500 leading-relaxed">
+                                {item.desc}
+                              </p>
+                              <span className="mt-4 inline-flex items-center gap-1 text-xs font-semibold text-teal-600">
+                                Voir les détails
+                                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={2} stroke="currentColor" className="w-3.5 h-3.5">
+                                  <path strokeLinecap="round" strokeLinejoin="round" d="M13.5 4.5 21 12m0 0-7.5 7.5M21 12H3" />
+                                </svg>
+                              </span>
+                            </button>
+                          </DialogTrigger>
+                        </div>
+
+                        {/* Center dot — only md+ */}
+                        <div className="hidden md:flex absolute left-1/2 -translate-x-1/2 w-10 h-10 rounded-full bg-teal-500 border-4 border-white shadow-md items-center justify-center z-10 text-white text-sm font-bold flex-shrink-0">
+                          {index + 1}
+                        </div>
+
+                        {/* Mobile dot + line */}
+                        <div className="flex md:hidden items-center gap-3 w-full">
+                          <div className="w-8 h-8 rounded-full bg-teal-500 border-4 border-white shadow text-white text-xs font-bold flex items-center justify-center flex-shrink-0">
+                            {index + 1}
+                          </div>
+                          {index < activiteCards.length - 1 && (
+                            <div className="flex-1 h-0.5 bg-teal-300/50" />
+                          )}
+                        </div>
+
+                        {/* Empty spacer on the opposite side (desktop) */}
+                        <div className="hidden md:block w-[calc(50%-2.5rem)]" />
+                      </motion.div>
+
+                      <DialogContent className="sm:max-w-xl">
+                        <DialogHeader>
+                          <DialogTitle>{item.dialogTitle}</DialogTitle>
+                          <DialogDescription>{item.dialogText}</DialogDescription>
+                        </DialogHeader>
+                        <div className="mt-4 space-y-2 rounded-lg bg-gray-50 p-4">
+                          {item.dialogDetails.map((detail, detailIndex) => (
+                            <p key={detailIndex} className="text-sm text-gray-700">
+                              • {detail}
+                            </p>
+                          ))}
+                        </div>
+                        <DialogClose asChild>
+                          <button className="bg-teal-600 text-white font-medium text-md rounded-md active:bg-teal-700 hover:bg-teal-500 py-2">
+                            Fermer
+                          </button>
+                        </DialogClose>
+                      </DialogContent>
+                    </Dialog>
+                  );
+                })}
+              </motion.div>
+            </div>
           </motion.div>
         </div>
       </section>
+
       <Footer />
     </main>
   );
